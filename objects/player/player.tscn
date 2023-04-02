@@ -1,0 +1,1047 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://theme.tres" type="Theme" id=1]
+[ext_resource path="res://objects/player/player.gd" type="Script" id=2]
+[ext_resource path="res://objects/player/states/idle_state.gd" type="Script" id=3]
+[ext_resource path="res://objects/player/states/move_state.gd" type="Script" id=4]
+[ext_resource path="res://objects/player/states/jump_state.gd" type="Script" id=5]
+[ext_resource path="res://objects/player/states/slam_state.gd" type="Script" id=6]
+[ext_resource path="res://objects/player/states/fall_state.gd" type="Script" id=7]
+[ext_resource path="res://objects/player/states/roll_state.gd" type="Script" id=8]
+[ext_resource path="res://objects/player/states/ledge_state.gd" type="Script" id=9]
+[ext_resource path="res://objects/player/states/project_state.gd" type="Script" id=10]
+[ext_resource path="res://gomarice_goma_block.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://objects/camera/camera.tscn" type="PackedScene" id=12]
+[ext_resource path="res://audio/whoosh.wav" type="AudioStream" id=13]
+[ext_resource path="res://audio/hit_b.wav" type="AudioStream" id=14]
+[ext_resource path="res://audio/air_whoosh_b.wav" type="AudioStream" id=15]
+[ext_resource path="res://objects/player/animated.gd" type="Script" id=16]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 31, 56 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Moving"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("0:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("4:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("5:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("0:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("4:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("5:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 11 )
+
+[node name="Player" type="KinematicBody2D"]
+collision_mask = 3
+script = ExtResource( 2 )
+deceleration = 2.2
+gravity = Vector2( 0, 575 )
+air_drag = 0.95
+jump_force = 275.0
+ledge_stick_time = 0.022
+
+[node name="InteractionArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2( 0, -56 )
+shape = SubResource( 1 )
+
+[node name="Body" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -21, -112, 18, -112, 18, 0, -21, 0 )
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Idle" type="Node2D" parent="Visuals"]
+position = Vector2( -5, 0 )
+
+[node name="ArmB" type="Polygon2D" parent="Visuals/Idle"]
+color = Color( 0.486275, 0.486275, 0.486275, 1 )
+antialiased = true
+polygon = PoolVector2Array( 9, -84, 11.3932, -81.943, 13.777, -64.3294, 15.1391, -53.2677, 16.6825, -49.1987, 14.7884, -44.9193, 11.4911, -48.427, 12.1927, -52.7064, 9.53916, -65.3889, 6, -80 )
+
+[node name="LegA" type="Polygon2D" parent="Visuals/Idle"]
+color = Color( 0.219608, 0.219608, 0.219608, 1 )
+antialiased = true
+polygon = PoolVector2Array( 11, -51.025, 11, -3, 6, -3, 5.15787, -25.8619, 0.198666, -51.2899 )
+
+[node name="LegB" type="Polygon2D" parent="Visuals/Idle"]
+color = Color( 0.34902, 0.34902, 0.34902, 1 )
+antialiased = true
+polygon = PoolVector2Array( -8.41026, -50.4741, 3.32276, -50.3166, 2, -3, -3, -3, -3.80894, -25.7439, -7.54977, -45.2793 )
+
+[node name="Body" type="Polygon2D" parent="Visuals/Idle"]
+position = Vector2( -0.353554, 3.18198 )
+antialiased = true
+polygon = PoolVector2Array( -8.25806, -51.5289, -8.3734, -56.0006, -7.46363, -65.7656, -7.82228, -79.0417, -4.64645, -87.182, -2.86709, -88.8727, -2.47337, -92.495, 5.81527, -88.9873, 9.35355, -87.182, 11.6036, -78.932, 12.6747, -65.7245, 12.2328, -56.1786, 11.5508, -50.585, 6.82674, -52.2115, -1.79501, -52.5831 )
+
+[node name="Head" type="Polygon2D" parent="Visuals/Idle"]
+position = Vector2( -0.353554, 3.18198 )
+color = Color( 0.368627, 0.345098, 0.345098, 1 )
+antialiased = true
+polygon = PoolVector2Array( -6.18854, -93.9855, -8.00849, -99.8181, -0.583305, -103.602, 8.26552, -104.023, 11.4088, -98.6374, 11.8999, -94.7789, 11.1219, -90.9328, 7.98408, -87.7509, 3.47628, -87.2205, -2.85012, -89.8588 )
+
+[node name="ArmA" type="Polygon2D" parent="Visuals/Idle"]
+color = Color( 0.709804, 0.709804, 0.709804, 1 )
+antialiased = true
+polygon = PoolVector2Array( -4.33481, -84.7298, -9.39332, -82.7366, -9.7468, -77.8561, -10.8818, -65.5023, -8.20908, -52.4729, -8.43181, -48.6865, -4.3114, -45.123, -2.30688, -50.2456, -4.97958, -53.3638, -6.98409, -65.3909, -4.625, -75.75, -3.5, -79.25 )
+
+[node name="Beanie" type="Polygon2D" parent="Visuals/Idle"]
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.18814, -91.8705, -2, -96, 4, -98, 10.2536, -97.3271, 10.2536, -100.155, 8.02132, -101.246, 2.72895, -107.18, -5.06442, -111.102, -10.5335, -110.752, -12.9862, -107.779, -12.7334, -104.023, -11.3176, -99.0676, -8.45679, -95.4378, -9.19387, -93.9943 )
+
+[node name="Shoe2" type="Polygon2D" parent="Visuals/Idle"]
+position = Vector2( 7, 0 )
+color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2, -1, -1, 0, 6, 0, 8, -1, 8, -2, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="Shoe3" type="Polygon2D" parent="Visuals/Idle"]
+position = Vector2( -2, 0 )
+color = Color( 0.207843, 0.207843, 0.207843, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2, -1, -1, 0, 6, 0, 8, -1, 8, -2, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="Projection" type="Node2D" parent="Visuals"]
+visible = false
+position = Vector2( 3.73083, 0 )
+
+[node name="ArmB" type="Polygon2D" parent="Visuals/Projection"]
+position = Vector2( 80.9352, -91.5369 )
+rotation = -1.80033
+color = Color( 0.486275, 0.486275, 0.486275, 1 )
+antialiased = true
+polygon = PoolVector2Array( 9, -84, 11.3932, -81.943, 12.0972, -64.9117, 15.1391, -53.2677, 16.6825, -49.1987, 14.2115, -44.6269, 11.4911, -48.427, 12.1927, -52.7064, 7.90768, -64.9482, 6, -80 )
+
+[node name="LegA" type="Polygon2D" parent="Visuals/Projection"]
+color = Color( 0.219608, 0.219608, 0.219608, 1 )
+antialiased = true
+polygon = PoolVector2Array( 11, -51.025, 8.75, -22.25, 3.625, -20.875, -0.75, -31.25, 1.375, -33.625, 3.375, -30.75, 0.198666, -51.2899 )
+
+[node name="Shoe2" type="Polygon2D" parent="Visuals/Projection"]
+position = Vector2( -4.5, -36.75 )
+rotation = 2.19152
+color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2, -1, -1, 0, 6, 0, 8, -1, 8, -2, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="LegB" type="Polygon2D" parent="Visuals/Projection"]
+color = Color( 0.34902, 0.34902, 0.34902, 1 )
+antialiased = true
+polygon = PoolVector2Array( -8.98337, -50.7538, 3.32276, -50.3166, 1.67534, -21.2921, -3.26403, -19.4117, -15.942, -33.5858, -13.5796, -36.4207, -3.894, -27.8375, -7.54977, -45.2793 )
+
+[node name="Body" type="Polygon2D" parent="Visuals/Projection"]
+position = Vector2( 13.311, 1.07974 )
+rotation = -0.244486
+antialiased = true
+polygon = PoolVector2Array( -9.82791, -52.7782, -10.0123, -57.7198, -7.46363, -65.7656, -7.82228, -79.0417, -4.64645, -87.182, -2.86709, -88.8727, -2.47337, -92.495, 5.81527, -88.9873, 9.35355, -87.182, 11.6036, -78.932, 12.6747, -65.7245, 12.2405, -57.5791, 10.7281, -50.4842, 6.82674, -52.2115, -1.79501, -52.5831 )
+
+[node name="Head" type="Polygon2D" parent="Visuals/Projection"]
+position = Vector2( 13.311, 1.07974 )
+rotation = -0.244486
+color = Color( 0.368627, 0.345098, 0.345098, 1 )
+antialiased = true
+polygon = PoolVector2Array( -6.18854, -93.9855, -8.00849, -99.8181, -0.583305, -103.602, 8.26552, -104.023, 11.4088, -98.6374, 11.8999, -94.7789, 11.1219, -90.9328, 7.98408, -87.7509, 3.47628, -87.2205, -2.85012, -89.8588 )
+
+[node name="ArmA" type="Polygon2D" parent="Visuals/Projection"]
+position = Vector2( 13.6646, -2.10224 )
+rotation = -0.244486
+color = Color( 0.709804, 0.709804, 0.709804, 1 )
+antialiased = true
+polygon = PoolVector2Array( -4.33481, -84.7298, -9.10895, -84.4902, -13.4431, -82.0931, -28.6934, -83.9652, -42.0343, -86.7781, -47.3112, -90.4135, -51.5851, -88.7743, -49.279, -84.5917, -43.791, -83.3514, -29.8127, -78.9623, -8.71078, -76.2745, -3.71072, -80.8245 )
+
+[node name="Beanie" type="Polygon2D" parent="Visuals/Projection"]
+position = Vector2( 13.6646, -2.10224 )
+rotation = -0.244486
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.18814, -91.8705, -2, -96, 4, -98, 10.2536, -97.3271, 10.2536, -100.155, 8.02132, -101.246, 2.72895, -107.18, -5.06442, -111.102, -10.5335, -110.752, -12.9862, -107.779, -12.7334, -104.023, -11.3176, -99.0676, -8.45679, -95.4378, -9.19387, -93.9943 )
+
+[node name="Shoe3" type="Polygon2D" parent="Visuals/Projection"]
+position = Vector2( -15.5272, -37.7573 )
+rotation = 2.43229
+color = Color( 0.207843, 0.207843, 0.207843, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2, -1, -1, 0, 6, 0, 8, -1, 8, -2, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="Midair" type="Node2D" parent="Visuals"]
+visible = false
+position = Vector2( -5, 0 )
+
+[node name="ArmB" type="Polygon2D" parent="Visuals/Midair"]
+position = Vector2( -18.0599, -3.05241 )
+rotation = 0.303102
+color = Color( 0.486275, 0.486275, 0.486275, 1 )
+antialiased = true
+polygon = PoolVector2Array( 9, -84, 11.6771, -83.4647, 23.7832, -71.3462, 29.3487, -61.86, 32.865, -58.5937, 30.7174, -54.4917, 26.58, -56.4203, 26.2535, -60.7881, 20.2621, -69.3095, 10.5657, -77.7117, 6, -80 )
+
+[node name="LegA" type="Polygon2D" parent="Visuals/Midair"]
+color = Color( 0.219608, 0.219608, 0.219608, 1 )
+antialiased = true
+polygon = PoolVector2Array( 11, -51.025, 24.0961, -46.1981, 25.8285, -40.371, 17.639, -29.5042, 13.3868, -31.5516, 19.2139, -41.1585, 0.476254, -47.9776, 0.198666, -51.2899 )
+
+[node name="Shoe2" type="Polygon2D" parent="Visuals/Midair"]
+position = Vector2( 12.7193, -28.5317 )
+rotation = 0.574535
+color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2, -1, -1, 0, 6, 0, 8, -1, 8, -2, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="LegB" type="Polygon2D" parent="Visuals/Midair"]
+color = Color( 0.34902, 0.34902, 0.34902, 1 )
+antialiased = true
+polygon = PoolVector2Array( -8.41026, -50.4741, 3.32276, -50.3166, 16.2119, -37.9006, 14.9491, -33.4108, -8.2017, -23.028, -9.04355, -27.3776, 8.21431, -36.7782, -7.54977, -45.2793 )
+
+[node name="Body" type="Polygon2D" parent="Visuals/Midair"]
+position = Vector2( -18.4134, 0.12957 )
+rotation = 0.303102
+antialiased = true
+polygon = PoolVector2Array( -7.09439, -51.4033, -8.3734, -56.0006, -7.46363, -65.7656, -7.82228, -79.0417, -4.64645, -87.182, -2.86709, -88.8727, -2.47337, -92.495, 5.81527, -88.9873, 9.35355, -87.182, 10.7766, -78.3937, 12.9037, -67.0073, 13.8078, -62.0036, 16.0973, -58.2042, 6.82674, -52.2115, -1.73458, -52.187 )
+
+[node name="Head" type="Polygon2D" parent="Visuals/Midair"]
+position = Vector2( -18.4134, 0.12957 )
+rotation = 0.303102
+color = Color( 0.368627, 0.345098, 0.345098, 1 )
+antialiased = true
+polygon = PoolVector2Array( -6.18854, -93.9855, -8.00849, -99.8181, -0.583305, -103.602, 8.26552, -104.023, 11.4088, -98.6374, 11.8999, -94.7789, 11.1219, -90.9328, 7.98408, -87.7509, 3.47628, -87.2205, -2.85012, -89.8588 )
+
+[node name="ArmA" type="Polygon2D" parent="Visuals/Midair"]
+position = Vector2( -17.168, -2.90376 )
+rotation = 0.303102
+color = Color( 0.709804, 0.709804, 0.709804, 1 )
+antialiased = true
+polygon = PoolVector2Array( -4.33481, -84.7298, -9.39332, -82.7366, -10.991, -78.6286, -18.5031, -70.7225, -23.8358, -59.2646, -25.0548, -54.6692, -21.9882, -50.8465, -18.6627, -54.1734, -19.6641, -59.3696, -14.6904, -68.5932, -6.54475, -76.3847, -3.5, -79.25 )
+
+[node name="Beanie" type="Polygon2D" parent="Visuals/Midair"]
+position = Vector2( -18.0599, -3.05241 )
+rotation = 0.303102
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.18814, -91.8705, -2, -96, 4, -98, 10.2536, -97.3271, 10.2536, -100.155, 8.02132, -101.246, 2.72895, -107.18, -5.06442, -111.102, -10.5335, -110.752, -12.9862, -107.779, -12.7334, -104.023, -11.3176, -99.0676, -8.45679, -95.4378, -9.19387, -93.9943 )
+
+[node name="Shoe3" type="Polygon2D" parent="Visuals/Midair"]
+position = Vector2( -12.5006, -24.1868 )
+rotation = 0.958626
+color = Color( 0.207843, 0.207843, 0.207843, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2, -1, -1, 0, 6, 0, 8, -1, 8, -2, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="Moving" type="Node2D" parent="Visuals"]
+visible = false
+position = Vector2( -5, 0 )
+script = ExtResource( 16 )
+
+[node name="0" type="Node2D" parent="Visuals/Moving"]
+visible = false
+
+[node name="ArmB" type="Polygon2D" parent="Visuals/Moving/0"]
+color = Color( 0.486275, 0.486275, 0.486275, 1 )
+antialiased = true
+polygon = PoolVector2Array( 9, -84, 11.3932, -81.943, 9.92963, -64.7601, 8.20799, -54.8276, 7.4134, -49.5303, 3.30798, -47.5438, 3.17554, -51.3844, 5.4269, -55.0925, 6.35394, -65.1574, 6, -80 )
+
+[node name="LegA" type="Polygon2D" parent="Visuals/Moving/0"]
+color = Color( 0.219608, 0.219608, 0.219608, 1 )
+antialiased = true
+polygon = PoolVector2Array( 11, -51.025, 22.6542, -32.8083, 28.6189, -9.13689, 25.0432, -8.60715, 16.6134, -30.5965, 0.198666, -51.2899 )
+
+[node name="LegB" type="Polygon2D" parent="Visuals/Moving/0"]
+color = Color( 0.34902, 0.34902, 0.34902, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.97332, -51.7378, 3.32276, -50.3166, -1.8533, -23.6295, -9.59298, -3.61279, -13.167, -5.06794, -7.51016, -25.3973 )
+
+[node name="Body" type="Polygon2D" parent="Visuals/Moving/0"]
+position = Vector2( -3.86125, 3.44257 )
+rotation = 0.0766555
+antialiased = true
+polygon = PoolVector2Array( -8.25806, -51.5289, -8.3734, -56.0006, -7.46363, -65.7656, -7.82228, -79.0417, -4.64645, -87.182, -2.86709, -88.8727, -2.47337, -92.495, 5.81527, -88.9873, 9.35355, -87.182, 11.6036, -78.932, 12.6747, -65.7245, 12.3254, -59.0413, 12.0967, -53.2838, 6.76029, -51.8021, -1.97977, -53.1896 )
+
+[node name="Head" type="Polygon2D" parent="Visuals/Moving/0"]
+position = Vector2( 1.18983, 3.86349 )
+rotation = 0.0232812
+color = Color( 0.368627, 0.345098, 0.345098, 1 )
+antialiased = true
+polygon = PoolVector2Array( -6.18854, -93.9855, -8.00849, -99.8181, -0.583305, -103.602, 8.26552, -104.023, 11.4088, -98.6374, 11.8999, -94.7789, 11.1219, -90.9328, 7.98408, -87.7509, 3.47628, -87.2205, -2.85012, -89.8588 )
+
+[node name="ArmA" type="Polygon2D" parent="Visuals/Moving/0"]
+position = Vector2( 7.99754, -0.300652 )
+rotation = -0.0582167
+color = Color( 0.709804, 0.709804, 0.709804, 1 )
+antialiased = true
+polygon = PoolVector2Array( -4.33481, -84.7298, -9.39332, -82.7366, -8.76701, -77.7043, -5.03529, -64.7601, 2.6902, -55.0001, 4.68732, -52.2672, 12.1503, -51.6365, 10.048, -55.3154, 5.94867, -56.5768, -1.72447, -67.0115, -4.03697, -75.8123, -3.5, -79.25 )
+
+[node name="Beanie" type="Polygon2D" parent="Visuals/Moving/0"]
+position = Vector2( 1.54338, 0.681511 )
+rotation = 0.0232812
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.18814, -91.8705, -2, -96, 4, -98, 10.2536, -97.3271, 10.2536, -100.155, 8.02132, -101.246, 2.72895, -107.18, -5.06442, -111.102, -10.5335, -110.752, -12.9862, -107.779, -12.7334, -104.023, -11.3176, -99.0676, -8.45679, -95.4378, -9.19387, -93.9943 )
+
+[node name="Shoe2" type="Polygon2D" parent="Visuals/Moving/0"]
+position = Vector2( 26.2773, -5.15125 )
+rotation = -0.21843
+color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2, -1, -1, 0, 6, 0, 8, -1, 8, -2, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="Shoe3" type="Polygon2D" parent="Visuals/Moving/0"]
+position = Vector2( -13.7014, -0.60862 )
+rotation = 0.156851
+color = Color( 0.207843, 0.207843, 0.207843, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2, -1, -1, 0, 6, 0, 8, -1, 8, -2, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="1" type="Node2D" parent="Visuals/Moving"]
+visible = false
+
+[node name="ArmB" type="Polygon2D" parent="Visuals/Moving/1"]
+position = Vector2( 0, -0.992126 )
+color = Color( 0.486275, 0.486275, 0.486275, 1 )
+antialiased = true
+polygon = PoolVector2Array( 11.624, -84.3495, 13.215, -82.1398, 13.7949, -67.2437, 16.136, -59.4712, 18.5708, -56.2873, 17.5407, -53.1034, 13.7013, -55.0699, 12.7649, -58.1602, 10.0492, -66.3072, 8.26521, -81.6978 )
+
+[node name="LegA" type="Polygon2D" parent="Visuals/Moving/1"]
+color = Color( 0.219608, 0.219608, 0.219608, 1 )
+antialiased = true
+polygon = PoolVector2Array( 11, -51.025, 18.875, -25.875, 16.2092, -3.92034, 11.9618, -5.10018, 12.25, -24.875, 0.198666, -51.2899 )
+
+[node name="LegB" type="Polygon2D" parent="Visuals/Moving/1"]
+color = Color( 0.34902, 0.34902, 0.34902, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.44488, -51.9968, 3.77549, -51.6334, -8.30865, -24.3474, -25.7251, -15.3131, -27.7308, -19.0886, -13.921, -27.5745 )
+
+[node name="Body" type="Polygon2D" parent="Visuals/Moving/1"]
+position = Vector2( -3.86125, 1.34801 )
+rotation = 0.0766555
+antialiased = true
+polygon = PoolVector2Array( -8.25806, -51.5289, -8.3734, -56.0006, -7.46363, -65.7656, -7.82228, -79.0417, -4.64645, -87.182, -2.86709, -88.8727, -2.47337, -92.495, 5.81527, -88.9873, 9.35355, -87.182, 11.6036, -78.932, 12.6747, -65.7245, 12.3254, -59.0413, 12.0967, -53.2838, 6.76029, -51.8021, -1.97977, -53.1896 )
+
+[node name="Head" type="Polygon2D" parent="Visuals/Moving/1"]
+position = Vector2( 1.18983, 1.76894 )
+rotation = 0.0232812
+color = Color( 0.368627, 0.345098, 0.345098, 1 )
+antialiased = true
+polygon = PoolVector2Array( -6.18854, -93.9855, -8.00849, -99.8181, -0.583305, -103.602, 8.26552, -104.023, 11.4088, -98.6374, 11.8999, -94.7789, 11.1219, -90.9328, 7.98408, -87.7509, 3.47628, -87.2205, -2.85012, -89.8588 )
+
+[node name="ArmA" type="Polygon2D" parent="Visuals/Moving/1"]
+position = Vector2( 3.48973, -2.04166 )
+color = Color( 0.709804, 0.709804, 0.709804, 1 )
+antialiased = true
+polygon = PoolVector2Array( -4.33481, -84.7298, -9.39332, -82.7366, -9.71258, -78.9803, -11.4957, -67.2709, -1.96218, -57.6725, 0.191632, -54.9568, 5.06113, -55.3314, 3.37554, -59.0772, 0.0979891, -59.7327, -7.00581, -68.1128, -5.19276, -76.8781, -3.5, -79.25 )
+
+[node name="Beanie" type="Polygon2D" parent="Visuals/Moving/1"]
+position = Vector2( 1.54338, -2.11459 )
+rotation = 0.0232812
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.18814, -91.8705, -2, -96, 4, -98, 10.2536, -97.3271, 10.2536, -100.155, 8.02132, -101.246, 2.72895, -107.18, -5.06442, -111.102, -10.5335, -110.752, -12.9862, -107.779, -12.7334, -104.023, -11.3176, -99.0676, -8.45679, -95.4378, -9.19387, -93.9943 )
+
+[node name="Shoe2" type="Polygon2D" parent="Visuals/Moving/1"]
+position = Vector2( 12.0162, -0.376117 )
+rotation = 0.0943938
+color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2.09173, -1.34699, -1.3409, -0.147742, 1.49351, 0.0483179, 4.07867, 0.0869102, 8.30212, -1.94659, 6.65726, -3.70253, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="Shoe3" type="Polygon2D" parent="Visuals/Moving/1"]
+position = Vector2( -30.5563, -16.5496 )
+rotation = 1.02261
+color = Color( 0.207843, 0.207843, 0.207843, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2, -1, -1, 0, 6, 0, 8, -1, 8, -2, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="2" type="Node2D" parent="Visuals/Moving"]
+visible = false
+
+[node name="ArmB" type="Polygon2D" parent="Visuals/Moving/2"]
+position = Vector2( 0, -0.667419 )
+color = Color( 0.486275, 0.486275, 0.486275, 1 )
+antialiased = true
+polygon = PoolVector2Array( 11.624, -84.3495, 13.215, -82.1398, 13.2282, -77.863, 16.8522, -68.5822, 23.1277, -62.7486, 25.9562, -61.4228, 27.4588, -57.6221, 22.4206, -58.2408, 21.1832, -60.4505, 13.405, -67.168, 8.26521, -81.6978 )
+
+[node name="LegA" type="Polygon2D" parent="Visuals/Moving/2"]
+color = Color( 0.219608, 0.219608, 0.219608, 1 )
+antialiased = true
+polygon = PoolVector2Array( 12.1118, -50.8744, 0.702362, -23.6901, -16.7211, -11.743, -19.224, -15.0801, -6.54015, -25.6744, 0.198666, -51.2899 )
+
+[node name="LegB" type="Polygon2D" parent="Visuals/Moving/2"]
+color = Color( 0.34902, 0.34902, 0.34902, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.97332, -51.7378, 3.32276, -52.3576, 3.05117, -23.256, -0.369354, -4.31792, -4.20702, -4.90192, -2.37162, -23.6731 )
+
+[node name="Body" type="Polygon2D" parent="Visuals/Moving/2"]
+position = Vector2( -3.86125, 1.67271 )
+rotation = 0.0766555
+antialiased = true
+polygon = PoolVector2Array( -8.25806, -51.5289, -8.3734, -56.0006, -7.46363, -65.7656, -7.82228, -79.0417, -4.64645, -87.182, -2.86709, -88.8727, -2.47337, -92.495, 5.81527, -88.9873, 9.35355, -87.182, 11.6036, -78.932, 12.6747, -65.7245, 12.3254, -59.0413, 12.0967, -53.2838, 6.76029, -51.8021, -1.97977, -53.1896 )
+
+[node name="Head" type="Polygon2D" parent="Visuals/Moving/2"]
+position = Vector2( 1.18983, 2.09364 )
+rotation = 0.0232812
+color = Color( 0.368627, 0.345098, 0.345098, 1 )
+antialiased = true
+polygon = PoolVector2Array( -6.18854, -93.9855, -8.00849, -99.8181, -0.583305, -103.602, 8.26552, -104.023, 11.4088, -98.6374, 11.8999, -94.7789, 11.1219, -90.9328, 7.98408, -87.7509, 3.47628, -87.2205, -2.85012, -89.8588 )
+
+[node name="ArmA" type="Polygon2D" parent="Visuals/Moving/2"]
+position = Vector2( 3.48973, -1.71695 )
+color = Color( 0.709804, 0.709804, 0.709804, 1 )
+antialiased = true
+polygon = PoolVector2Array( -4.33481, -84.7298, -9.14537, -82.3691, -9.98576, -77.6973, -15.492, -68.1865, -7.81665, -57.8415, -5.64752, -53.3364, -0.475024, -52.0016, 0.0255404, -57.3409, -4.6464, -59.8438, -10.6532, -68.0197, -5.36987, -76.7059, -3.83607, -79.1835 )
+
+[node name="Beanie" type="Polygon2D" parent="Visuals/Moving/2"]
+position = Vector2( 1.54338, -1.08834 )
+rotation = 0.0232812
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.18814, -91.8705, -2, -96, 4, -98, 10.2536, -97.3271, 10.2536, -100.155, 8.02132, -101.246, 2.72895, -107.18, -5.06442, -111.102, -10.5335, -110.752, -12.9862, -107.779, -12.7334, -104.023, -11.3176, -99.0676, -8.45679, -95.4378, -9.19387, -93.9943 )
+
+[node name="Shoe2" type="Polygon2D" parent="Visuals/Moving/2"]
+position = Vector2( -21.6117, -12.0258 )
+rotation = 0.871675
+color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2.09173, -1.34699, -1.3409, -0.147742, 1.49351, 0.0483179, 4.07867, 0.0869102, 8.30212, -1.94659, 6.65726, -3.70253, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="Shoe3" type="Polygon2D" parent="Visuals/Moving/2"]
+position = Vector2( -4.5258, -1.20067 )
+rotation = 0.259246
+color = Color( 0.207843, 0.207843, 0.207843, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2, -1, -1, 0, 4.08493, 0.0340536, 7.43508, -0.909688, 7.43986, -2.19809, 3.79218, -4.05107, 1, -4, 0, -5, -2, -5 )
+
+[node name="3" type="Node2D" parent="Visuals/Moving"]
+visible = false
+
+[node name="ArmB" type="Polygon2D" parent="Visuals/Moving/3"]
+color = Color( 0.486275, 0.486275, 0.486275, 1 )
+antialiased = true
+polygon = PoolVector2Array( 11.624, -84.3495, 13.215, -82.1398, 13.7949, -67.2437, 16.136, -59.4712, 18.5708, -56.2873, 17.5407, -53.1034, 13.7013, -55.0699, 12.7649, -58.1602, 10.0492, -66.3072, 8.26521, -81.6978 )
+
+[node name="LegA" type="Polygon2D" parent="Visuals/Moving/3"]
+color = Color( 0.219608, 0.219608, 0.219608, 1 )
+antialiased = true
+polygon = PoolVector2Array( 12.1118, -50.8744, -2.20589, -23.3478, -17.1318, -13.0469, -19.4443, -16.5155, -8.09216, -26.5012, 0.198666, -51.2899 )
+
+[node name="LegB" type="Polygon2D" parent="Visuals/Moving/3"]
+color = Color( 0.34902, 0.34902, 0.34902, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.97332, -51.7378, 3.32276, -50.3166, 15.6851, -25.3199, 15.6754, -3.08809, 12.1715, -4.25607, 10.4511, -23.3153, -7.24646, -48.1275 )
+
+[node name="Body" type="Polygon2D" parent="Visuals/Moving/3"]
+position = Vector2( -3.86125, 2.34013 )
+rotation = 0.0766555
+antialiased = true
+polygon = PoolVector2Array( -8.25806, -51.5289, -8.3734, -56.0006, -7.46363, -65.7656, -7.82228, -79.0417, -4.64645, -87.182, -2.86709, -88.8727, -2.47337, -92.495, 5.81527, -88.9873, 9.35355, -87.182, 11.6036, -78.932, 12.6747, -65.7245, 12.3254, -59.0413, 12.0967, -53.2838, 6.76029, -51.8021, -1.97977, -53.1896 )
+
+[node name="Head" type="Polygon2D" parent="Visuals/Moving/3"]
+position = Vector2( 1.18983, 2.76106 )
+rotation = 0.0232812
+color = Color( 0.368627, 0.345098, 0.345098, 1 )
+antialiased = true
+polygon = PoolVector2Array( -6.18854, -93.9855, -8.00849, -99.8181, -0.583305, -103.602, 8.26552, -104.023, 11.4088, -98.6374, 11.8999, -94.7789, 11.1219, -90.9328, 7.98408, -87.7509, 3.47628, -87.2205, -2.85012, -89.8588 )
+
+[node name="ArmA" type="Polygon2D" parent="Visuals/Moving/3"]
+position = Vector2( 3.48973, -1.04953 )
+color = Color( 0.709804, 0.709804, 0.709804, 1 )
+antialiased = true
+polygon = PoolVector2Array( -6.2175, -84.0173, -9.92562, -82.5605, -9.66075, -77.5281, -7.68038, -65.9298, 0.644071, -57.9027, 3.17113, -55.0783, 7.63066, -54.9296, 6.5901, -58.9432, 2.42788, -60.8757, -4.11276, -67.119, -4.39693, -76.0268, -3.17154, -81.3687 )
+
+[node name="Beanie" type="Polygon2D" parent="Visuals/Moving/3"]
+position = Vector2( 1.54338, 0.280617 )
+rotation = 0.0232812
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.18814, -91.8705, -2, -96, 4, -98, 10.2536, -97.3271, 10.2536, -100.155, 8.02132, -101.246, 2.72895, -107.18, -5.06442, -111.102, -10.5335, -110.752, -12.9862, -107.779, -12.7334, -104.023, -11.3176, -99.0676, -8.45679, -95.4378, -9.19387, -93.9943 )
+
+[node name="Shoe2" type="Polygon2D" parent="Visuals/Moving/3"]
+position = Vector2( -21.8766, -13.1515 )
+rotation = 0.871675
+color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2.09173, -1.34699, -1.3409, -0.147742, 3.39176, 0.0861378, 7.68303, -1.01612, 6.13789, -2.74346, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="Shoe3" type="Polygon2D" parent="Visuals/Moving/3"]
+position = Vector2( 11.6916, -0.491918 )
+rotation = 0.161389
+color = Color( 0.207843, 0.207843, 0.207843, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2, -1, -1, 0, 4.08493, 0.0340536, 7.43508, -0.909688, 7.43986, -2.19809, 3.79218, -4.05107, 1, -4, 0, -5, -2, -5 )
+
+[node name="4" type="Node2D" parent="Visuals/Moving"]
+visible = false
+
+[node name="ArmB" type="Polygon2D" parent="Visuals/Moving/4"]
+position = Vector2( 0, 0.66217 )
+color = Color( 0.486275, 0.486275, 0.486275, 1 )
+antialiased = true
+polygon = PoolVector2Array( 11.624, -84.3495, 13.215, -82.1398, 12.6737, -67.8647, 11.9721, -58.6044, 11.4109, -55.3773, 9.02567, -49.4844, 7.20168, -54.3952, 7.76291, -58.6044, 10.0492, -66.3072, 8.26521, -81.6978 )
+
+[node name="LegA" type="Polygon2D" parent="Visuals/Moving/4"]
+color = Color( 0.219608, 0.219608, 0.219608, 1 )
+antialiased = true
+polygon = PoolVector2Array( 12.1118, -50.8744, 5.20206, -21.484, 0.0794449, -3.88877, -4.26369, -5.33648, -0.366005, -22.3749, 0.198666, -51.2899 )
+
+[node name="LegB" type="Polygon2D" parent="Visuals/Moving/4"]
+color = Color( 0.34902, 0.34902, 0.34902, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.97332, -51.7378, 3.32276, -50.3166, 10.5, -24.5, 10.1053, -4.07499, 6.88091, -4.71987, 4.5, -23.75, -7.64331, -47.6315 )
+
+[node name="Body" type="Polygon2D" parent="Visuals/Moving/4"]
+position = Vector2( -3.86125, 3.0023 )
+rotation = 0.0766555
+antialiased = true
+polygon = PoolVector2Array( -8.25806, -51.5289, -8.3734, -56.0006, -7.46363, -65.7656, -7.82228, -79.0417, -4.64645, -87.182, -2.86709, -88.8727, -2.47337, -92.495, 5.81527, -88.9873, 9.35355, -87.182, 11.6036, -78.932, 12.6747, -65.7245, 12.3254, -59.0413, 12.0967, -53.2838, 6.76029, -51.8021, -1.97977, -53.1896 )
+
+[node name="Head" type="Polygon2D" parent="Visuals/Moving/4"]
+position = Vector2( 1.18983, 3.42323 )
+rotation = 0.0232812
+color = Color( 0.368627, 0.345098, 0.345098, 1 )
+antialiased = true
+polygon = PoolVector2Array( -6.18854, -93.9855, -8.00849, -99.8181, -0.583305, -103.602, 7.27268, -104.065, 11.4088, -98.6374, 11.8999, -94.7789, 11.1219, -90.9328, 7.98408, -87.7509, 3.47628, -87.2205, -2.85012, -89.8588 )
+
+[node name="ArmA" type="Polygon2D" parent="Visuals/Moving/4"]
+position = Vector2( 3.48973, -0.38736 )
+color = Color( 0.709804, 0.709804, 0.709804, 1 )
+antialiased = true
+polygon = PoolVector2Array( -6.2831, -84.2293, -10.0586, -81.2797, -8.86473, -76.1126, 2.99392, -66.6679, 11.508, -64.1452, 14.6614, -63.0941, 18.971, -65.0912, 16.3432, -69.0855, 12.3489, -67.719, 4.25526, -70.0315, -2.61473, -76.4876, -4.0414, -82.9315 )
+
+[node name="Beanie" type="Polygon2D" parent="Visuals/Moving/4"]
+position = Vector2( 1.54338, 1.2234 )
+rotation = 0.0232812
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.18814, -91.8705, -2, -96, 4, -98, 10.2536, -97.3271, 10.2536, -100.155, 8.02132, -101.246, 2.72895, -107.18, -5.06442, -111.102, -10.5335, -110.752, -12.9862, -107.779, -12.7334, -104.023, -11.3176, -99.0676, -8.45679, -95.4378, -9.19387, -93.9943 )
+
+[node name="Shoe2" type="Polygon2D" parent="Visuals/Moving/4"]
+position = Vector2( -4.1969, -0.959605 )
+rotation = 0.134257
+color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2.09173, -1.34699, -1.3409, -0.147742, 3.39176, 0.0861378, 7.68303, -1.01612, 6.13789, -2.74346, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="Shoe3" type="Polygon2D" parent="Visuals/Moving/4"]
+position = Vector2( 6.53558, -0.509403 )
+rotation = 0.162061
+color = Color( 0.207843, 0.207843, 0.207843, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2, -1, -1, 0, 4.08493, 0.0340536, 7.43508, -0.909688, 7.43986, -2.19809, 3.79218, -4.05107, 1, -4, 0, -5, -2, -5 )
+
+[node name="5" type="Node2D" parent="Visuals/Moving"]
+visible = false
+
+[node name="ArmB" type="Polygon2D" parent="Visuals/Moving/5"]
+position = Vector2( 1.05112, 2.52269 )
+rotation = -0.0172346
+color = Color( 0.486275, 0.486275, 0.486275, 1 )
+antialiased = true
+polygon = PoolVector2Array( 11.624, -84.3495, 13.215, -82.1398, 12.8431, -67.4698, 11.3784, -60.0327, 11.9793, -56.124, 7.78273, -51.7412, 8.05917, -54.8551, 7.66944, -58.0918, 10.0492, -66.3072, 8.26521, -81.6978 )
+
+[node name="LegA" type="Polygon2D" parent="Visuals/Moving/5"]
+color = Color( 0.219608, 0.219608, 0.219608, 1 )
+antialiased = true
+polygon = PoolVector2Array( 12.1118, -50.8744, 14.879, -22.4226, 13.1695, -3.09796, 8.70997, -4.36149, 9.89918, -22.1253, 0.198666, -51.2899 )
+
+[node name="LegB" type="Polygon2D" parent="Visuals/Moving/5"]
+color = Color( 0.34902, 0.34902, 0.34902, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.97332, -51.7378, 3.32276, -50.3166, 4, -22.25, -1.91857, -5.5507, -5.18888, -6.7399, -2, -21.875 )
+
+[node name="Body" type="Polygon2D" parent="Visuals/Moving/5"]
+position = Vector2( -2.81013, 4.86282 )
+rotation = 0.0594209
+antialiased = true
+polygon = PoolVector2Array( -8.25806, -51.5289, -8.3734, -56.0006, -7.46363, -65.7656, -7.82228, -79.0417, -4.64645, -87.182, -2.86709, -88.8727, -2.47337, -92.495, 5.81527, -88.9873, 9.35355, -87.182, 11.6036, -78.932, 12.6747, -65.7245, 12.3254, -59.0413, 12.0967, -53.2838, 6.76029, -51.8021, -1.97977, -53.1896 )
+
+[node name="Head" type="Polygon2D" parent="Visuals/Moving/5"]
+position = Vector2( 2.24094, 5.28375 )
+rotation = 0.00604652
+color = Color( 0.368627, 0.345098, 0.345098, 1 )
+antialiased = true
+polygon = PoolVector2Array( -6.18854, -93.9855, -8.00849, -99.8181, -0.583305, -103.602, 8.26552, -104.023, 11.4088, -98.6374, 11.8999, -94.7789, 11.1219, -90.9328, 7.98408, -87.7509, 3.47628, -87.2205, -2.85012, -89.8588 )
+
+[node name="ArmA" type="Polygon2D" parent="Visuals/Moving/5"]
+position = Vector2( 4.54085, 1.47316 )
+rotation = -0.0172346
+color = Color( 0.709804, 0.709804, 0.709804, 1 )
+antialiased = true
+polygon = PoolVector2Array( -4.33481, -84.7298, -9.14404, -82.3442, -9.57828, -77.6664, -5.6321, -65.5098, 2.60236, -58.9098, 5.22502, -55.7143, 8.84404, -55.4944, 8.45034, -60.0691, 4.99965, -60.9161, -2.14069, -67.0247, -4.74049, -76.257, -3.25794, -80.2095 )
+
+[node name="Beanie" type="Polygon2D" parent="Visuals/Moving/5"]
+position = Vector2( 2.5945, 3.64515 )
+rotation = 0.00604652
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.18814, -91.8705, -2, -96, 4, -98, 10.2536, -97.3271, 10.2536, -100.155, 8.02132, -101.246, 2.72895, -107.18, -5.06442, -111.102, -10.5335, -110.752, -12.9862, -107.779, -12.7334, -104.023, -11.3176, -99.0676, -8.45679, -95.4378, -9.19387, -93.9943 )
+
+[node name="Shoe2" type="Polygon2D" parent="Visuals/Moving/5"]
+position = Vector2( 8.59165, -0.818205 )
+rotation = 0.0767839
+color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2.09173, -1.34699, -1.3409, -0.147742, 3.39176, 0.0861378, 7.68303, -1.01612, 6.13789, -2.74346, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="Shoe3" type="Polygon2D" parent="Visuals/Moving/5"]
+position = Vector2( -7.05851, -4.14917 )
+rotation = 0.528248
+color = Color( 0.207843, 0.207843, 0.207843, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2, -1, -1, 0, 4.08493, 0.0340536, 7.43508, -0.909688, 7.43986, -2.19809, 3.79218, -4.05107, 1, -4, 0, -5, -2, -5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Visuals/Moving"]
+anims/Moving = SubResource( 3 )
+anims/RESET = SubResource( 4 )
+
+[node name="Hanging" type="Node2D" parent="Visuals"]
+visible = false
+position = Vector2( 4.32598, 14.75 )
+
+[node name="ArmB" type="Polygon2D" parent="Visuals/Hanging"]
+color = Color( 0.486275, 0.486275, 0.486275, 1 )
+antialiased = true
+polygon = PoolVector2Array( 9, -84, 11.7579, -82.5013, 13.4903, -77.6191, 17.8699, -70.8492, 20.4066, -71.911, 23.3562, -70.4362, 20.4656, -67.8406, 16.0136, -69.408, 11.2855, -75.493, 6, -80 )
+
+[node name="LegA" type="Polygon2D" parent="Visuals/Hanging"]
+position = Vector2( -9.6069, -4.40973 )
+rotation = 0.195423
+color = Color( 0.219608, 0.219608, 0.219608, 1 )
+antialiased = true
+polygon = PoolVector2Array( 10.8357, -50.3466, 9.2362, -23.6804, -5.50222, -15.4592, -7.4178, -19.7777, 4, -26, 0.198666, -51.1875 )
+
+[node name="Shoe2" type="Polygon2D" parent="Visuals/Hanging"]
+position = Vector2( -16.326, -22.75 )
+rotation = 1.21741
+color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2, -1, -1, 0, 6, 0, 8, -1, 8, -2, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="LegB" type="Polygon2D" parent="Visuals/Hanging"]
+position = Vector2( -9.6069, -4.40973 )
+rotation = 0.195423
+color = Color( 0.34902, 0.34902, 0.34902, 1 )
+antialiased = true
+polygon = PoolVector2Array( -8.41026, -50.4741, 3.32276, -50.3166, -2.48574, -22.4208, -14.686, -15.1567, -16.7185, -19.3004, -7, -26, -7.54977, -45.2793 )
+
+[node name="Body" type="Polygon2D" parent="Visuals/Hanging"]
+position = Vector2( -0.353554, 3.18198 )
+antialiased = true
+polygon = PoolVector2Array( -8.25806, -51.5289, -8.3734, -56.0006, -7.46363, -65.7656, -7.82228, -79.0417, -4.64645, -87.182, -2.86709, -88.8727, -2.47337, -92.495, 5.81527, -88.9873, 9.35355, -87.182, 11.6036, -78.932, 12.6747, -65.7245, 12.2328, -56.1786, 11.5508, -50.585, 6.82674, -52.2115, -1.79501, -52.5831 )
+
+[node name="Head" type="Polygon2D" parent="Visuals/Hanging"]
+position = Vector2( -3.10666, 2.34771 )
+rotation = 0.0314893
+color = Color( 0.368627, 0.345098, 0.345098, 1 )
+antialiased = true
+polygon = PoolVector2Array( -6.18854, -93.9855, -8.00849, -99.8181, -0.583305, -103.602, 8.26552, -104.023, 11.4088, -98.6374, 11.8999, -94.7789, 11.1219, -90.9328, 7.98408, -87.7509, 3.47628, -87.2205, -2.85012, -89.8588 )
+
+[node name="ArmA" type="Polygon2D" parent="Visuals/Hanging"]
+color = Color( 0.709804, 0.709804, 0.709804, 1 )
+antialiased = true
+polygon = PoolVector2Array( -4.33481, -84.7298, -8.90625, -82.5338, -8, -78, 3, -71, 17, -68, 22, -67, 25, -69, 21, -71, 17, -70, 4, -75, -2, -80 )
+
+[node name="Beanie" type="Polygon2D" parent="Visuals/Hanging"]
+position = Vector2( -2.7531, -0.834274 )
+rotation = 0.0314893
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.18814, -91.8705, -2, -96, 4, -98, 10.2536, -97.3271, 10.2536, -100.155, 8.02132, -101.246, 2.72895, -107.18, -5.06442, -111.102, -10.5335, -110.752, -12.9862, -107.779, -12.7334, -104.023, -11.3176, -99.0676, -8.45679, -95.4378, -9.19387, -93.9943 )
+
+[node name="Shoe3" type="Polygon2D" parent="Visuals/Hanging"]
+position = Vector2( -25.326, -23.7615 )
+rotation = 1.07825
+color = Color( 0.207843, 0.207843, 0.207843, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2, -1, -1, 0, 6, 0, 8, -1, 8, -2, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="Slam" type="Node2D" parent="Visuals"]
+visible = false
+position = Vector2( -5, 44.8063 )
+
+[node name="ArmB" type="Polygon2D" parent="Visuals/Slam"]
+color = Color( 0.486275, 0.486275, 0.486275, 1 )
+antialiased = true
+polygon = PoolVector2Array( 9, -84, 11.3932, -81.943, 13.777, -64.3294, 9.53916, -65.3889, 6, -80 )
+
+[node name="Body" type="Polygon2D" parent="Visuals/Slam"]
+position = Vector2( -0.353554, 3.18198 )
+antialiased = true
+polygon = PoolVector2Array( -8.45448, -54.8329, -6.64645, -65.7541, -7.82228, -79.0417, -4.64645, -87.182, -2.86709, -88.8727, -2.47337, -92.495, 5.81527, -88.9873, 9.35355, -87.182, 11.6036, -78.932, 12.6747, -65.7245, 12.2328, -56.1786, 6.82674, -52.2115, -1.79501, -52.5831 )
+
+[node name="ArmB2" type="Polygon2D" parent="Visuals/Slam"]
+color = Color( 0.486275, 0.486275, 0.486275, 1 )
+antialiased = true
+polygon = PoolVector2Array( 8.25, -79.625, 11.25, -77.1875, 10.75, -72.75, 13.777, -64.3294, 9.53916, -65.3889, 7.9375, -73.25, 6.3125, -77.3125 )
+
+[node name="LegA" type="Polygon2D" parent="Visuals/Slam"]
+color = Color( 0.219608, 0.219608, 0.219608, 1 )
+antialiased = true
+polygon = PoolVector2Array( 11.899, -47.4464, 12.0042, -51.8611, 12.0535, -60.9171, 8.21412, -53.5192, 12.8316, -52.5455, 15.9866, -69.626, 10.7522, -72.6535, 0.198666, -51.2899, -0.0265732, -48.837, 6.43321, -46.9209 )
+
+[node name="LegB" type="Polygon2D" parent="Visuals/Slam"]
+color = Color( 0.34902, 0.34902, 0.34902, 1 )
+antialiased = true
+polygon = PoolVector2Array( -8.90639, -51.0991, -3.89257, -47.6068, 2.33774, -48.4488, 0.906452, -66.1294, -1.78773, -54.3423, 4.86354, -53.8372, 3.60064, -70.4232, -1.25136, -72.3616, -6.72322, -58.4968 )
+
+[node name="Head" type="Polygon2D" parent="Visuals/Slam"]
+position = Vector2( -0.353554, 3.18198 )
+color = Color( 0.368627, 0.345098, 0.345098, 1 )
+antialiased = true
+polygon = PoolVector2Array( -6.18854, -93.9855, -8.00849, -99.8181, -5.44068, -106.572, 3.81963, -108.116, 8.26552, -104.023, 11.4088, -98.6374, 11.8999, -94.7789, 11.1219, -90.9328, 7.98408, -87.7509, 3.47628, -87.2205, -2.85012, -89.8588 )
+
+[node name="ArmA" type="Polygon2D" parent="Visuals/Slam"]
+color = Color( 0.709804, 0.709804, 0.709804, 1 )
+antialiased = true
+polygon = PoolVector2Array( -4.33481, -84.7298, -9.39332, -82.7366, -9.7468, -77.8561, -10.8818, -65.5023, -6.61253, -60.2465, -3.04087, -60.5441, -0.362129, -72.9457, 1.1875, -76.9375, 0, -80, -2.6875, -80.125, -3.3125, -74.5625, -6.60186, -70.1839, -6.60186, -66.7191, -4.625, -75.75, -3.5, -79.25 )
+
+[node name="Beanie" type="Polygon2D" parent="Visuals/Slam"]
+position = Vector2( -28.0434, -9.48846 )
+rotation = 0.29861
+color = Color( 0, 0, 0, 1 )
+antialiased = true
+polygon = PoolVector2Array( -7.18814, -91.8705, -2, -96, 4, -98, 10.2536, -97.3271, 10.2536, -100.155, 8.02132, -101.246, 2.72895, -107.18, -5.06442, -111.102, -10.5335, -110.752, -12.9862, -107.779, -12.7334, -104.023, -11.3176, -99.0676, -8.45679, -95.4378, -9.19387, -93.9943 )
+
+[node name="Shoe2" type="Polygon2D" parent="Visuals/Slam"]
+position = Vector2( 8.15623, -50.3487 )
+rotation = 0.278239
+scale = Vector2( 1.23782, 0.921107 )
+color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -1.48633, -1.14864, -0.843903, -0.521427, 3.49274, -0.544106, 4.95363, -1.30886, 5.06081, -2.96091, 2.52925, -3.91711, 1, -4, 0, -5, -1.28724, -4.91164 )
+
+[node name="Shoe3" type="Polygon2D" parent="Visuals/Slam"]
+position = Vector2( 1.03009, -50.7191 )
+rotation = 0.179481
+scale = Vector2( 0.904957, 0.934161 )
+color = Color( 0.207843, 0.207843, 0.207843, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1, -3, -2, -1, -1, 0, 6, 0, 8, -1, 8, -2, 4, -4, 1, -4, 0, -5, -2, -5 )
+
+[node name="GroundRays" type="Node2D" parent="."]
+
+[node name="A" type="RayCast2D" parent="GroundRays"]
+position = Vector2( 0, -2 )
+enabled = true
+exclude_parent = false
+cast_to = Vector2( 0, 3 )
+collision_mask = 2
+
+[node name="D" type="RayCast2D" parent="GroundRays"]
+position = Vector2( -21, -2 )
+enabled = true
+exclude_parent = false
+cast_to = Vector2( 0, 3 )
+collision_mask = 2
+
+[node name="E" type="RayCast2D" parent="GroundRays"]
+position = Vector2( 18, -2 )
+enabled = true
+exclude_parent = false
+cast_to = Vector2( 0, 3 )
+collision_mask = 2
+
+[node name="HeadRays" type="Node2D" parent="."]
+
+[node name="A" type="RayCast2D" parent="HeadRays"]
+position = Vector2( 0, -104 )
+enabled = true
+exclude_parent = false
+cast_to = Vector2( 0, -9 )
+collision_mask = 2
+
+[node name="LedgeRays" type="Node2D" parent="."]
+position = Vector2( 0, -3 )
+
+[node name="Right" type="RayCast2D" parent="LedgeRays"]
+position = Vector2( 0, -49 )
+enabled = true
+exclude_parent = false
+cast_to = Vector2( 20, 0 )
+collision_mask = 2
+
+[node name="Left" type="RayCast2D" parent="LedgeRays"]
+position = Vector2( 0, -49 )
+enabled = true
+exclude_parent = false
+cast_to = Vector2( -23, 0 )
+collision_mask = 2
+
+[node name="LeftCheck" type="RayCast2D" parent="LedgeRays"]
+position = Vector2( -23, -49 )
+enabled = true
+exclude_parent = false
+cast_to = Vector2( 0, 7 )
+collision_mask = 2
+
+[node name="RightCheck" type="RayCast2D" parent="LedgeRays"]
+position = Vector2( 20, -49 )
+enabled = true
+exclude_parent = false
+cast_to = Vector2( 0, 7 )
+collision_mask = 2
+
+[node name="States" type="Node" parent="."]
+
+[node name="Idle" type="Node" parent="States"]
+script = ExtResource( 3 )
+
+[node name="Move" type="Node" parent="States"]
+script = ExtResource( 4 )
+
+[node name="Jump" type="Node" parent="States"]
+script = ExtResource( 5 )
+jump_time = 0.25
+coyote_time = 0.22
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="States/Jump"]
+stream = ExtResource( 13 )
+bus = "Effects"
+
+[node name="Fall" type="Node" parent="States"]
+script = ExtResource( 7 )
+
+[node name="LandingSound" type="AudioStreamPlayer" parent="States/Fall"]
+
+[node name="Roll" type="Node" parent="States"]
+script = ExtResource( 8 )
+roll_force = 675.0
+roll_offset = Vector2( 0, -0.4 )
+
+[node name="RollSound" type="AudioStreamPlayer" parent="States/Roll"]
+stream = ExtResource( 13 )
+bus = "Effects"
+
+[node name="Ledge" type="Node" parent="States"]
+script = ExtResource( 9 )
+
+[node name="Project" type="Node" parent="States"]
+script = ExtResource( 10 )
+projection_time = 0.45
+
+[node name="ProjectionSound" type="AudioStreamPlayer" parent="States/Project"]
+stream = ExtResource( 15 )
+volume_db = -24.0
+bus = "Effects"
+
+[node name="Slam" type="Node" parent="States"]
+script = ExtResource( 6 )
+windup = 0.35
+release_force = 300.0
+
+[node name="HitGroundSound" type="AudioStreamPlayer" parent="States/Slam"]
+stream = ExtResource( 14 )
+volume_db = -8.0
+bus = "Effects"
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="States/Slam"]
+stream = ExtResource( 13 )
+bus = "Effects"
+
+[node name="Hud" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Interact" type="Label" parent="Hud"]
+visible = false
+anchor_right = 1.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 128 )
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "F / Enter - XBox X - DualShock Square"
+align = 1
+valign = 1
+
+[node name="ColorRect3" type="ColorRect" parent="Hud"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -4945.0
+margin_top = -751.0
+margin_right = -512.0
+margin_bottom = 770.0
+color = Color( 0.235294, 0.254902, 0.270588, 1 )
+
+[node name="ColorRect4" type="ColorRect" parent="Hud"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 512.363
+margin_top = -759.97
+margin_right = 4945.36
+margin_bottom = 761.03
+color = Color( 0.235294, 0.254902, 0.270588, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="Hud"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -4950.0
+margin_top = -751.0
+margin_right = -517.0
+margin_bottom = 770.0
+color = Color( 0.243137, 0.305882, 0.282353, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="Hud"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 517.363
+margin_top = -759.97
+margin_right = 4950.36
+margin_bottom = 761.03
+color = Color( 0.243137, 0.305882, 0.282353, 1 )
+
+[node name="Camera2D" parent="." instance=ExtResource( 12 )]
+
+[connection signal="area_entered" from="InteractionArea" to="." method="_on_interactable_entered"]
+[connection signal="area_exited" from="InteractionArea" to="." method="_on_interactable_exited"]
+[connection signal="visibility_changed" from="Visuals/Moving" to="Visuals/Moving" method="_visibility_changed"]

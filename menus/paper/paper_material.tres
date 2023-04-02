@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform vec2 offset = vec2(0.0, 0.0);
+
+void fragment() {
+	vec3 screen = texture(SCREEN_TEXTURE, SCREEN_UV).rgb;
+	float rand = screen.r * screen.g * screen.b;
+	
+	COLOR.rgb = vec3(0.0);
+	
+	COLOR.a = (1.0 - (texture(TEXTURE, UV + offset + rand).r)) * 0.45;
+}"
+
+[resource]
+shader = SubResource( 1 )
+shader_param/offset = Vector2( 0, 0 )

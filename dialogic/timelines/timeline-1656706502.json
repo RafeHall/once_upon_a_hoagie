@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[color=#3b80d0][center]Jalapeño Cheddar Cheese[/center][/color][br][br]\tA slice of very spicy cheddar cheese; so spicy infact that physics cannot comprehend it's existence proceeding to lock it in place once thrown before dissapearing to god knows where.[br][br][color=#A5EFAC][center]Left Control / E / X - XBox RB - DualShock R1 (In Air)[/center][/color]"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1656706502.json",
+		"name": "Platform Sign"
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It's just a brick of Jalapeño Cheddar Cheese sitting there..."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[color=#3b80d0]Jalapeño Cheddar Cheese[/color] Aquired!"
+		},
+		{
+			"definition": "1656532801-146",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1656823164.json",
+		"name": "Cheese"
+	}
+}

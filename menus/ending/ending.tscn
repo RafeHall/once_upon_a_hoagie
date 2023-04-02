@@ -1,0 +1,205 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://theme.tres" type="Theme" id=1]
+[ext_resource path="res://menus/ending/button.gd" type="Script" id=2]
+
+[node name="Ending" type="Node"]
+
+[node name="Hoagie" type="Node2D" parent="."]
+position = Vector2( 35.3177, 35.3176 )
+
+[node name="Polygon2D7" type="Polygon2D" parent="Hoagie"]
+color = Color( 1, 0.901961, 0.384314, 1 )
+antialiased = true
+polygon = PoolVector2Array( 226.932, 105.32, 155.732, 122.35, 148.605, 129.255, 198.233, 166.723 )
+
+[node name="Polygon2D11" type="Polygon2D" parent="Hoagie"]
+position = Vector2( -204, -32 )
+color = Color( 0.992157, 1, 0.745098, 1 )
+antialiased = true
+polygon = PoolVector2Array( 828, 492, 1004, 376, 994.916, 428.732, 964.214, 475.452, 914.158, 512.827, 856.092, 524.173 )
+
+[node name="Polygon2D10" type="Polygon2D" parent="Hoagie"]
+position = Vector2( -0.28064, -0.561249 )
+scale = Vector2( 0.987758, 1.02682 )
+color = Color( 0.345098, 0.564706, 0.329412, 1 )
+antialiased = true
+polygon = PoolVector2Array( 717.682, 372.682, 730.682, 377.682, 747.182, 392.182, 737.682, 411.682, 707.182, 416.182, 698.682, 395.182, 704.682, 379.182 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Hoagie/Polygon2D10"]
+color = Color( 0.54979, 0.707031, 0.538559, 1 )
+antialiased = true
+polygon = PoolVector2Array( 710.49, 396.474, 709.895, 383.18, 718.824, 378.814, 733.508, 389.728, 738.865, 388.537, 742.437, 394.093, 731.92, 407.586, 714.856, 409.173, 713.863, 402.824, 707.117, 399.451 )
+
+[node name="Polygon2D20" type="Polygon2D" parent="Hoagie"]
+position = Vector2( -73.3561, 41.6461 )
+scale = Vector2( 0.987758, 1.02682 )
+color = Color( 0.345098, 0.564706, 0.329412, 1 )
+antialiased = true
+polygon = PoolVector2Array( 717.682, 372.682, 730.682, 377.682, 747.182, 392.182, 737.682, 411.682, 707.182, 416.182, 698.682, 395.182, 704.682, 379.182 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Hoagie/Polygon2D20"]
+color = Color( 0.54979, 0.707031, 0.538559, 1 )
+antialiased = true
+polygon = PoolVector2Array( 710.49, 396.474, 709.895, 383.18, 718.824, 378.814, 733.508, 389.728, 738.865, 388.537, 742.437, 394.093, 731.92, 407.586, 714.856, 409.173, 713.863, 402.824, 707.117, 399.451 )
+
+[node name="Polygon2D19" type="Polygon2D" parent="Hoagie"]
+position = Vector2( 27.7194, -37.0612 )
+scale = Vector2( 0.987758, 1.02682 )
+color = Color( 0.345098, 0.564706, 0.329412, 1 )
+antialiased = true
+polygon = PoolVector2Array( 717.682, 372.682, 730.682, 377.682, 747.182, 392.182, 737.682, 411.682, 707.182, 416.182, 698.682, 395.182, 704.682, 379.182 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Hoagie/Polygon2D19"]
+color = Color( 0.54979, 0.707031, 0.538559, 1 )
+antialiased = true
+polygon = PoolVector2Array( 710.49, 396.474, 709.895, 383.18, 718.824, 378.814, 733.508, 389.728, 738.865, 388.537, 742.437, 394.093, 731.92, 407.586, 714.856, 409.173, 713.863, 402.824, 707.117, 399.451 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Hoagie"]
+position = Vector2( -204, -32 )
+color = Color( 0.992157, 1, 0.745098, 1 )
+antialiased = true
+polygon = PoolVector2Array( 828, 492, 840, 424, 880, 368, 956, 332, 1004, 376 )
+
+[node name="Polygon2D4" type="Polygon2D" parent="Hoagie"]
+position = Vector2( -204, -32 )
+color = Color( 0.870588, 0.878431, 0.647059, 1 )
+antialiased = true
+polygon = PoolVector2Array( 899.162, 358.637, 956, 332, 1004, 376, 994.677, 428.851 )
+
+[node name="Polygon2D6" type="Polygon2D" parent="Hoagie"]
+position = Vector2( -204, -32 )
+color = Color( 0.6, 0.603922, 0.466667, 1 )
+antialiased = true
+polygon = PoolVector2Array( 828, 492, 832.029, 468.036, 982.553, 372.456, 986.318, 375.405 )
+
+[node name="Polygon2D12" type="Polygon2D" parent="Hoagie"]
+position = Vector2( -204, -32 )
+color = Color( 0.803922, 0.698039, 0.498039, 1 )
+antialiased = true
+polygon = PoolVector2Array( 828, 492, 832.459, 466.731, 381.501, 154.7, 378, 186.5, 855.862, 524.338 )
+
+[node name="Polygon2D5" type="Polygon2D" parent="Hoagie"]
+position = Vector2( -204, -32 )
+color = Color( 0.623529, 0.568627, 0.47451, 1 )
+antialiased = true
+polygon = PoolVector2Array( 828, 492, 832.529, 467.983, 381.243, 156.048, 380, 168 )
+
+[node name="Polygon2D8" type="Polygon2D" parent="Hoagie"]
+color = Color( 1, 0.901961, 0.384314, 1 )
+antialiased = true
+polygon = PoolVector2Array( 171.069, 127.242, 161.576, 135.625, 174.622, 147.236, 633.535, 470.457, 642.444, 457.985, 781.484, 350.411, 778.811, 343.729, 630.922, 443.51 )
+
+[node name="Polygon2D9" type="Polygon2D" parent="Hoagie"]
+color = Color( 0.717647, 0.54902, 0.454902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 176.772, 128.974, 178.318, 115.427, 172.525, 118.002, 167.805, 125.671, 168.041, 133.812, 161.635, 145.621, 196.341, 145.621, 215.029, 162.306, 213.694, 178.324, 239.056, 177.657, 247.733, 188.336, 266.42, 210.361, 263.083, 219.704, 295.787, 219.037, 317.812, 233.053, 324.486, 252.408, 325.153, 262.419, 357.012, 263.271, 371.205, 269.093, 374.542, 278.437, 393.23, 307.136, 409.248, 299.795, 434.61, 307.136, 450.628, 331.831, 453.298, 351.186, 468.649, 359.195, 494.011, 350.519, 504.689, 364.535, 530.051, 395.903, 528.716, 401.243, 551.409, 386.559, 569.429, 408.584, 581.443, 429.274, 599.463, 444.625, 610.142, 437.951, 634.169, 446.627, 652.857, 450.632, 656.194, 428.607, 678.886, 423.935, 698.909, 424.602, 709.587, 411.254, 719.599, 390.564, 752.302, 379.218, 754.304, 373.211, 760.311, 361.197, 770.99, 351.853, 778.332, 347.182, 776.624, 343.629, 771.266, 346.606, 739.716, 369.623, 708.167, 386.489, 677.393, 409.587, 660.155, 417.155, 634.087, 436.916, 625.258, 437.757, 607.599, 426.405, 600.031, 417.576, 573.122, 400.337, 557.566, 388.144, 532.759, 375.531, 514.68, 362.077, 498.282, 347.781, 473.056, 334.327, 459.181, 324.657, 444.045, 307.839, 416.715, 295.225, 397.795, 280.93, 382.659, 266.635, 362.478, 255.283, 338.933, 239.726, 316.649, 224.17, 292.683, 209.875, 271.661, 193.897, 253.098, 181.728, 228.355, 164.466, 202.287, 145.125 )
+
+[node name="Polygon2D13" type="Polygon2D" parent="Hoagie"]
+position = Vector2( -143.781, -17.0612 )
+scale = Vector2( 0.987758, 1.02682 )
+color = Color( 0.345098, 0.564706, 0.329412, 1 )
+antialiased = true
+polygon = PoolVector2Array( 717.682, 372.682, 730.682, 377.682, 747.182, 392.182, 737.682, 411.682, 707.182, 416.182, 698.682, 395.182, 704.682, 379.182 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Hoagie/Polygon2D13"]
+color = Color( 0.54979, 0.707031, 0.538559, 1 )
+antialiased = true
+polygon = PoolVector2Array( 710.49, 396.474, 709.895, 383.18, 718.824, 378.814, 733.508, 389.728, 738.865, 388.537, 742.437, 394.093, 731.92, 407.586, 714.856, 409.173, 713.863, 402.824, 707.117, 399.451 )
+
+[node name="Polygon2D14" type="Polygon2D" parent="Hoagie"]
+position = Vector2( -237.887, -93.1471 )
+scale = Vector2( 0.987758, 1.02682 )
+color = Color( 0.345098, 0.564706, 0.329412, 1 )
+antialiased = true
+polygon = PoolVector2Array( 717.682, 372.682, 730.682, 377.682, 747.182, 392.182, 737.682, 411.682, 707.182, 416.182, 698.682, 395.182, 704.682, 379.182 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Hoagie/Polygon2D14"]
+color = Color( 0.54979, 0.707031, 0.538559, 1 )
+antialiased = true
+polygon = PoolVector2Array( 710.49, 396.474, 709.895, 383.18, 718.824, 378.814, 733.508, 389.728, 738.865, 388.537, 742.437, 394.093, 731.92, 407.586, 714.856, 409.173, 713.863, 402.824, 707.117, 399.451 )
+
+[node name="Polygon2D15" type="Polygon2D" parent="Hoagie"]
+position = Vector2( -314.64, -130.523 )
+scale = Vector2( 0.987758, 1.02682 )
+color = Color( 0.345098, 0.564706, 0.329412, 1 )
+antialiased = true
+polygon = PoolVector2Array( 717.682, 372.682, 730.682, 377.682, 747.182, 392.182, 737.682, 411.682, 707.182, 416.182, 698.682, 395.182, 704.682, 379.182 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Hoagie/Polygon2D15"]
+color = Color( 0.54979, 0.707031, 0.538559, 1 )
+antialiased = true
+polygon = PoolVector2Array( 710.49, 396.474, 709.895, 383.18, 718.824, 378.814, 733.508, 389.728, 738.865, 388.537, 742.437, 394.093, 731.92, 407.586, 714.856, 409.173, 713.863, 402.824, 707.117, 399.451 )
+
+[node name="Polygon2D16" type="Polygon2D" parent="Hoagie"]
+position = Vector2( -386.722, -195.93 )
+scale = Vector2( 0.987758, 1.02682 )
+color = Color( 0.345098, 0.564706, 0.329412, 1 )
+antialiased = true
+polygon = PoolVector2Array( 717.682, 372.682, 730.682, 377.682, 747.182, 392.182, 737.682, 411.682, 707.182, 416.182, 698.682, 395.182, 704.682, 379.182 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Hoagie/Polygon2D16"]
+color = Color( 0.54979, 0.707031, 0.538559, 1 )
+antialiased = true
+polygon = PoolVector2Array( 710.49, 396.474, 709.895, 383.18, 718.824, 378.814, 733.508, 389.728, 738.865, 388.537, 742.437, 394.093, 731.92, 407.586, 714.856, 409.173, 713.863, 402.824, 707.117, 399.451 )
+
+[node name="Polygon2D17" type="Polygon2D" parent="Hoagie"]
+position = Vector2( -478.158, -250.658 )
+scale = Vector2( 0.987758, 1.02682 )
+color = Color( 0.345098, 0.564706, 0.329412, 1 )
+antialiased = true
+polygon = PoolVector2Array( 717.682, 372.682, 730.682, 377.682, 747.182, 392.182, 737.682, 411.682, 707.182, 416.182, 698.682, 395.182, 704.682, 379.182 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Hoagie/Polygon2D17"]
+color = Color( 0.54979, 0.707031, 0.538559, 1 )
+antialiased = true
+polygon = PoolVector2Array( 710.49, 396.474, 709.895, 383.18, 718.824, 378.814, 733.508, 389.728, 738.865, 388.537, 742.437, 394.093, 731.92, 407.586, 714.856, 409.173, 713.863, 402.824, 707.117, 399.451 )
+
+[node name="Polygon2D18" type="Polygon2D" parent="Hoagie"]
+position = Vector2( -529.549, -267.344 )
+rotation = -0.0229422
+scale = Vector2( 0.987758, 1.02682 )
+color = Color( 0.345098, 0.564706, 0.329412, 1 )
+antialiased = true
+polygon = PoolVector2Array( 717.682, 372.682, 730.682, 377.682, 747.182, 392.182, 737.682, 411.682, 707.182, 416.182, 698.682, 395.182, 704.682, 379.182 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Hoagie/Polygon2D18"]
+color = Color( 0.54979, 0.707031, 0.538559, 1 )
+antialiased = true
+polygon = PoolVector2Array( 710.49, 396.474, 709.895, 383.18, 718.824, 378.814, 733.508, 389.728, 738.865, 388.537, 742.437, 394.093, 731.92, 407.586, 714.856, 409.173, 713.863, 402.824, 707.117, 399.451 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="Hoagie"]
+position = Vector2( -204, -32 )
+color = Color( 0.803922, 0.698039, 0.498039, 1 )
+antialiased = true
+polygon = PoolVector2Array( 832.459, 466.731, 840, 424, 880, 368, 956, 332, 496, 60, 432, 68, 384, 132, 381.501, 154.7 )
+
+[node name="Polygon2D3" type="Polygon2D" parent="Hoagie"]
+position = Vector2( -204, -32 )
+color = Color( 0.686275, 0.568627, 0.45098, 1 )
+antialiased = true
+polygon = PoolVector2Array( 899.375, 358.75, 956, 332, 496, 60, 461.452, 64.3259 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -416.5
+margin_top = 80.8173
+margin_right = 416.5
+margin_bottom = 144.817
+theme = ExtResource( 1 )
+text = "The hoagie is assembled!"
+
+[node name="Button" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 100.0
+margin_top = -100.0
+margin_right = 356.0
+margin_bottom = -60.0
+rect_min_size = Vector2( 256, 40 )
+theme = ExtResource( 1 )
+text = "Main Menu"
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

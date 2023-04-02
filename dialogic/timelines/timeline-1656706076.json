@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[color=#3b80d0][center]Spicy Pepper[/center][/color][br][br]\tThe spicy pepper is so hot you can feel your soul separating from your body then snapping back together launching you forwards, despite this you feel at peace the whole time.[br][br][color=#A5EFAC][center]Q / Z - XBox Y - DualShock Triangle (In Air)[/center][/color]"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1656706076.json",
+		"name": "Project Sign"
+	}
+}

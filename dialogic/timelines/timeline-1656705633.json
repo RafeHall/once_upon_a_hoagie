@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[color=#3b80d0][center]Hoagie Roll[/center][/color][br][br]\tThe hoagie roll has the strange effect of making the wielder start rolling a bunch just because. Luckily the wielder also becomes consistently great at rolling too. [br][br][color=#A5EFAC][center]Left Shift - XBox B - DualShock Circle (On Ground)[/center][/color]"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1656705633.json",
+		"name": "Roll Sign"
+	}
+}

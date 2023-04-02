@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/all_wheat_is_in_03.wav-7cfa9524e4ef3dc8c7833c4e5e0acbfb.sample"
+
+[deps]
+
+source_file="res://voices/all_wheat_is_in_03.wav"
+dest_files=[ "res://.import/all_wheat_is_in_03.wav-7cfa9524e4ef3dc8c7833c4e5e0acbfb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

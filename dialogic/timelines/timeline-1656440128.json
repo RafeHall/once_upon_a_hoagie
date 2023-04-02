@@ -1,0 +1,77 @@
+{
+	"events": [
+		{
+			"character": "character-1656442630.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Gluten Tag.",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialog",
+					"file": "res://voices/glutentag_05.wav"
+				}
+			}
+		},
+		{
+			"character": "character-1656439902.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Gluten Tag? As in a game of bread?"
+		},
+		{
+			"character": "character-1656439936.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "..."
+		},
+		{
+			"character": "character-1656439902.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Where am I?"
+		},
+		{
+			"character": "character-1656439936.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "..."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[color=#3b80d0]Hoagie Roll[/color] Aquired!"
+		},
+		{
+			"definition": "1656532311-648",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"character": "character-1656439902.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Mmm, looks good... Now I'm in the mood for a spicy hoagie.\nWith roast beef and some spicy cheddar...\nOh! Of course some peppers too!"
+		},
+		{
+			"character": "character-1656439936.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "All wheat is in.",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialog",
+					"file": "res://voices/all_wheat_is_in_04.wav"
+				}
+			}
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1656440128.json",
+		"name": "Gluten Tag"
+	}
+}

@@ -1,0 +1,67 @@
+{
+	"events": [
+		{
+			"character": "character-1656442630.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Good afternoon; my names barry. Don't wear it out.",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialog",
+					"file": "res://voices/Berry-03.wav",
+					"volume": -12
+				}
+			}
+		},
+		{
+			"character": "character-1656439902.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You wouldn't happen to have some spicy roast beef laying around anywhere- would you? "
+		},
+		{
+			"character": "character-1656439957.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You're looking for some roast beef? Well I suppose I might have some.",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialog",
+					"file": "res://voices/Berry-02.wav",
+					"volume": -12
+				}
+			}
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[color=#3b80d0]Tongue Roasting Roast Beef[/color] Aquired!"
+		},
+		{
+			"definition": "1656532789-366",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"character": "character-1656439902.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh, thanks a bunch!"
+		},
+		{
+			"character": "character-1656439957.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Moo."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1656769423.json",
+		"name": "Barry"
+	}
+}

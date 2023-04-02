@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[color=#3b80d0][center]Tongue Roasting Roast Beef[/center][/color][br][br]\tThis roast beef is packed full of so much spice it breaks the laws of gravity and pulls you downwards at an accelerated rate! Perhaps the ground is curious and wants a taste... [br][br][color=#A5EFAC][center]S / Down - DPad Down - Left Stick Down (In Air)[/center][/color]"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1656706487.json",
+		"name": "Slam Sign"
+	}
+}

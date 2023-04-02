@@ -1,0 +1,1650 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://levels/shared/level.gd" type="Script" id=1]
+[ext_resource path="res://objects/player/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://levels/shared/interactable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://levels/shared/trigger.tscn" type="PackedScene" id=4]
+[ext_resource path="res://levels/shared/exit_area.tscn" type="PackedScene" id=5]
+[ext_resource path="res://levels/fifth/fifth.tscn" type="PackedScene" id=6]
+
+[node name="Fourth" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Backgrounds" type="Node2D" parent="."]
+
+[node name="Background" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( -4900, -688 )
+scale = Vector2( 1.96747, 1.78331 )
+color = Color( 0.494118, 0.768627, 0.756863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1408, -1200, 6144, -1200, 6144, 1168, 1408, 1168 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LargeTree" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 3204, -1196 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( -44, -576, -80, -288, -84, -136, 996, -136, 1212, -1076, 564, -944 )
+
+[node name="Back" type="Node2D" parent="Backgrounds"]
+
+[node name="Mushrooms2" type="Node2D" parent="Backgrounds/Back"]
+position = Vector2( 2200, 624 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+
+[node name="Stem" type="Polygon2D" parent="Backgrounds/Back/Mushrooms2"]
+color = Color( 0.960784, 0.929412, 0.729412, 1 )
+antialiased = true
+polygon = PoolVector2Array( 2340, -624, 2344, -636, 2348, -632, 2340, -616 )
+
+[node name="Cap" type="Polygon2D" parent="Backgrounds/Back/Mushrooms2"]
+color = Color( 0.188235, 0.294118, 0.615686, 1 )
+antialiased = true
+polygon = PoolVector2Array( 2340, -632, 2344, -632, 2348, -628, 2352, -632, 2348, -640, 2344, -640, 2340, -636 )
+
+[node name="Stem2" type="Polygon2D" parent="Backgrounds/Back/Mushrooms2"]
+position = Vector2( 28, 0 )
+color = Color( 0.960784, 0.929412, 0.729412, 1 )
+antialiased = true
+polygon = PoolVector2Array( 2348, -624, 2344, -632, 2348, -632, 2352, -624 )
+
+[node name="Cap2" type="Polygon2D" parent="Backgrounds/Back/Mushrooms2"]
+position = Vector2( 28, 0 )
+color = Color( 0.188235, 0.294118, 0.615686, 1 )
+antialiased = true
+polygon = PoolVector2Array( 2340, -628, 2348, -632, 2356, -632, 2352, -636, 2348, -640, 2344, -640, 2340, -636 )
+
+[node name="Mushrooms3" type="Node2D" parent="Backgrounds/Back"]
+position = Vector2( 5420, 1008 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+
+[node name="Stem" type="Polygon2D" parent="Backgrounds/Back/Mushrooms3"]
+color = Color( 0.960784, 0.929412, 0.729412, 1 )
+antialiased = true
+polygon = PoolVector2Array( 2340, -624, 2344, -636, 2348, -632, 2340, -616 )
+
+[node name="Cap" type="Polygon2D" parent="Backgrounds/Back/Mushrooms3"]
+color = Color( 0.188235, 0.294118, 0.615686, 1 )
+antialiased = true
+polygon = PoolVector2Array( 2340, -632, 2344, -632, 2348, -628, 2352, -632, 2348, -640, 2344, -640, 2340, -636 )
+
+[node name="Stem2" type="Polygon2D" parent="Backgrounds/Back/Mushrooms3"]
+position = Vector2( 28, 0 )
+color = Color( 0.960784, 0.929412, 0.729412, 1 )
+antialiased = true
+polygon = PoolVector2Array( 2348, -624, 2344, -632, 2348, -632, 2352, -624 )
+
+[node name="Cap2" type="Polygon2D" parent="Backgrounds/Back/Mushrooms3"]
+position = Vector2( 28, 0 )
+color = Color( 0.188235, 0.294118, 0.615686, 1 )
+antialiased = true
+polygon = PoolVector2Array( 2340, -628, 2348, -632, 2356, -632, 2352, -636, 2348, -640, 2344, -640, 2340, -636 )
+
+[node name="Barrels2" type="Node2D" parent="Backgrounds/Back"]
+position = Vector2( 2072, 444 )
+
+[node name="Barrel" type="Node2D" parent="Backgrounds/Back/Barrels2"]
+position = Vector2( 20, 0 )
+
+[node name="Base" type="Polygon2D" parent="Backgrounds/Back/Barrels2/Barrel"]
+color = Color( 0.603922, 0.388235, 0.282353, 1 )
+antialiased = true
+polygon = PoolVector2Array( -12, 0, 12, 0, 16, -4, 16, -40, 12, -44, -12, -44, -16, -40, -16, -4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RingA" type="Polygon2D" parent="Backgrounds/Back/Barrels2/Barrel"]
+color = Color( 0.345098, 0.270588, 0.388235, 1 )
+antialiased = true
+polygon = PoolVector2Array( -16, -36, 16, -36, 16, -32, -16, -32 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RingA2" type="Polygon2D" parent="Backgrounds/Back/Barrels2/Barrel"]
+color = Color( 0.345098, 0.270588, 0.388235, 1 )
+antialiased = true
+polygon = PoolVector2Array( -16, -8, -16, -12, 16, -12, 16, -8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Barrel2" type="Node2D" parent="Backgrounds/Back/Barrels2"]
+position = Vector2( -16, 0 )
+
+[node name="Base" type="Polygon2D" parent="Backgrounds/Back/Barrels2/Barrel2"]
+color = Color( 0.603922, 0.388235, 0.282353, 1 )
+antialiased = true
+polygon = PoolVector2Array( -12, 0, 12, 0, 16, -4, 16, -40, 12, -44, -12, -44, -16, -40, -16, -4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RingA" type="Polygon2D" parent="Backgrounds/Back/Barrels2/Barrel2"]
+color = Color( 0.345098, 0.270588, 0.388235, 1 )
+antialiased = true
+polygon = PoolVector2Array( -16, -36, 16, -36, 16, -32, -16, -32 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RingA2" type="Polygon2D" parent="Backgrounds/Back/Barrels2/Barrel2"]
+color = Color( 0.345098, 0.270588, 0.388235, 1 )
+antialiased = true
+polygon = PoolVector2Array( -16, -8, -16, -12, 16, -12, 16, -8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Barrel3" type="Node2D" parent="Backgrounds/Back/Barrels2"]
+position = Vector2( 0, -44 )
+
+[node name="Base" type="Polygon2D" parent="Backgrounds/Back/Barrels2/Barrel3"]
+color = Color( 0.603922, 0.388235, 0.282353, 1 )
+antialiased = true
+polygon = PoolVector2Array( -12, 0, 12, 0, 16, -4, 16, -40, 12, -44, -12, -44, -16, -40, -16, -4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RingA" type="Polygon2D" parent="Backgrounds/Back/Barrels2/Barrel3"]
+color = Color( 0.345098, 0.270588, 0.388235, 1 )
+antialiased = true
+polygon = PoolVector2Array( -16, -36, 16, -36, 16, -32, -16, -32 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="RingA2" type="Polygon2D" parent="Backgrounds/Back/Barrels2/Barrel3"]
+color = Color( 0.345098, 0.270588, 0.388235, 1 )
+antialiased = true
+polygon = PoolVector2Array( -16, -8, -16, -12, 16, -12, 16, -8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground" type="Polygon2D" parent="Backgrounds"]
+color = Color( 0.603922, 0.388235, 0.282353, 1 )
+antialiased = true
+polygon = PoolVector2Array( 640, 444, 480, 0, -2088, 0, -1816, 1756, 4540, 2052, 4844, 472, 3532, 472, 3120, 384, 2352, 384, 2160, 444 )
+
+[node name="GroundShadow2" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( -1280, 1076 )
+color = Color( 0.392157, 0.490196, 0.203922, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2816, -624, 2816, -608, 2800, -596, 2784, -608, 2768, -592, 2752, -608, 2736, -592, 2720, -608, 2704, -592, 2688, -608, 2672, -592, 2656, -608, 2640, -592, 2624, -608, 2608, -592, 2592, -608, 2576, -592, 2560, -608, 2544, -592, 2528, -608, 2512, -592, 2496, -608, 2480, -592, 2464, -608, 2448, -592, 2432, -608, 2416, -592, 2400, -608, 2384, -592, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -592, 2272, -608, 2256, -592, 2240, -608, 2224, -592, 2208, -608, 2192, -592, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -592, 2080, -608, 2064, -592, 2048, -608, 2032, -592, 2016, -608, 2000, -592, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="Grass2" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( -1280, 1068 )
+color = Color( 0.568627, 0.780392, 0.254902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2816, -624, 2816, -608, 2800, -596, 2784, -608, 2768, -600, 2752, -608, 2736, -592, 2720, -608, 2704, -596, 2688, -608, 2672, -592, 2656, -608, 2640, -600, 2624, -608, 2608, -600, 2592, -608, 2576, -592, 2560, -608, 2544, -600, 2528, -608, 2512, -592, 2496, -608, 2480, -600, 2464, -608, 2448, -592, 2432, -608, 2416, -600, 2400, -608, 2384, -600, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -600, 2272, -608, 2256, -600, 2240, -608, 2224, -592, 2208, -608, 2192, -600, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -600, 2080, -608, 2064, -600, 2048, -608, 2032, -592, 2016, -608, 2000, -600, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="GroundShadow4" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 432, 1016 )
+color = Color( 0.392157, 0.490196, 0.203922, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2688, -624, 2688, -608, 2672, -592, 2656, -608, 2640, -592, 2624, -608, 2608, -592, 2592, -608, 2576, -592, 2560, -608, 2544, -592, 2528, -608, 2512, -592, 2496, -608, 2480, -592, 2464, -608, 2448, -592, 2432, -608, 2416, -592, 2400, -608, 2384, -592, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -592, 2272, -608, 2256, -592, 2240, -608, 2224, -592, 2208, -608, 2192, -592, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -592, 2080, -608, 2064, -592, 2048, -608, 2032, -592, 2016, -608, 2000, -592, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="Grass4" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 432, 1008 )
+color = Color( 0.568627, 0.780392, 0.254902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2688, -624, 2688, -608, 2672, -592, 2656, -608, 2640, -600, 2624, -608, 2608, -600, 2592, -608, 2576, -592, 2560, -608, 2544, -600, 2528, -608, 2512, -592, 2496, -608, 2480, -600, 2464, -608, 2448, -592, 2432, -608, 2416, -600, 2400, -608, 2384, -600, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -600, 2272, -608, 2256, -600, 2240, -608, 2224, -592, 2208, -608, 2192, -600, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -600, 2080, -608, 2064, -600, 2048, -608, 2032, -592, 2016, -608, 2000, -600, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="GroundShadow5" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1612, 1104 )
+color = Color( 0.392157, 0.490196, 0.203922, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2688, -624, 2688, -608, 2672, -592, 2656, -608, 2640, -592, 2624, -608, 2608, -592, 2592, -608, 2576, -592, 2560, -608, 2544, -592, 2528, -608, 2512, -592, 2496, -608, 2480, -592, 2464, -608, 2448, -592, 2432, -608, 2416, -592, 2400, -608, 2384, -592, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -592, 2272, -608, 2256, -592, 2240, -608, 2224, -592, 2208, -608, 2192, -592, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -592, 2080, -608, 2064, -592, 2048, -608, 2032, -592, 2016, -608, 2000, -592, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="Grass5" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1612, 1096 )
+color = Color( 0.568627, 0.780392, 0.254902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2688, -624, 2688, -608, 2672, -592, 2656, -608, 2640, -600, 2624, -608, 2608, -600, 2592, -608, 2576, -592, 2560, -608, 2544, -600, 2528, -608, 2512, -592, 2496, -608, 2480, -600, 2464, -608, 2448, -592, 2432, -608, 2416, -600, 2400, -608, 2384, -600, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -600, 2272, -608, 2256, -600, 2240, -608, 2224, -592, 2208, -608, 2192, -600, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -600, 2080, -608, 2064, -600, 2048, -608, 2032, -592, 2016, -608, 2000, -600, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="GroundShadow6" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2380, 1104 )
+color = Color( 0.392157, 0.490196, 0.203922, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2688, -624, 2688, -608, 2672, -592, 2656, -608, 2640, -592, 2624, -608, 2608, -592, 2592, -608, 2576, -592, 2560, -608, 2544, -592, 2528, -608, 2512, -592, 2496, -608, 2480, -592, 2464, -608, 2448, -592, 2432, -608, 2416, -592, 2400, -608, 2384, -592, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -592, 2272, -608, 2256, -592, 2240, -608, 2224, -592, 2208, -608, 2192, -592, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -592, 2080, -608, 2064, -592, 2048, -608, 2032, -592, 2016, -608, 2000, -592, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="Grass6" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2380, 1096 )
+color = Color( 0.568627, 0.780392, 0.254902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2688, -624, 2688, -608, 2672, -592, 2656, -608, 2640, -600, 2624, -608, 2608, -600, 2592, -608, 2576, -592, 2560, -608, 2544, -600, 2528, -608, 2512, -592, 2496, -608, 2480, -600, 2464, -608, 2448, -592, 2432, -608, 2416, -600, 2400, -608, 2384, -600, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -600, 2272, -608, 2256, -600, 2240, -608, 2224, -592, 2208, -608, 2192, -600, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -600, 2080, -608, 2064, -600, 2048, -608, 2032, -592, 2016, -608, 2000, -600, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="GroundShadow7" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( -2976, 632 )
+color = Color( 0.392157, 0.490196, 0.203922, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2688, -624, 2688, -608, 2672, -592, 2656, -608, 2640, -592, 2624, -608, 2608, -592, 2592, -608, 2576, -592, 2560, -608, 2544, -592, 2528, -608, 2512, -592, 2496, -608, 2480, -592, 2464, -608, 2448, -592, 2432, -608, 2416, -592, 2400, -608, 2384, -592, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -592, 2272, -608, 2256, -592, 2240, -608, 2224, -592, 2208, -608, 2192, -592, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -592, 2080, -608, 2064, -592, 2048, -608, 2032, -592, 2016, -608, 2000, -592, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="Grass7" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( -2976, 624 )
+color = Color( 0.568627, 0.780392, 0.254902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2688, -624, 2688, -608, 2672, -592, 2656, -608, 2640, -600, 2624, -608, 2608, -600, 2592, -608, 2576, -592, 2560, -608, 2544, -600, 2528, -608, 2512, -592, 2496, -608, 2480, -600, 2464, -608, 2448, -592, 2432, -608, 2416, -600, 2400, -608, 2384, -600, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -600, 2272, -608, 2256, -600, 2240, -608, 2224, -592, 2208, -608, 2192, -600, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -600, 2080, -608, 2064, -600, 2048, -608, 2032, -592, 2016, -608, 2000, -600, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="GroundShadow8" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( -2208, 632 )
+color = Color( 0.392157, 0.490196, 0.203922, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2688, -624, 2688, -608, 2672, -592, 2656, -608, 2640, -592, 2624, -608, 2608, -592, 2592, -608, 2576, -592, 2560, -608, 2544, -592, 2528, -608, 2512, -592, 2496, -608, 2480, -592, 2464, -608, 2448, -592, 2432, -608, 2416, -592, 2400, -608, 2384, -592, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -592, 2272, -608, 2256, -592, 2240, -608, 2224, -592, 2208, -608, 2192, -592, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -592, 2080, -608, 2064, -592, 2048, -608, 2032, -592, 2016, -608, 2000, -592, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="Grass8" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( -2208, 624 )
+color = Color( 0.568627, 0.780392, 0.254902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2688, -624, 2688, -608, 2672, -592, 2656, -608, 2640, -600, 2624, -608, 2608, -600, 2592, -608, 2576, -592, 2560, -608, 2544, -600, 2528, -608, 2512, -592, 2496, -608, 2480, -600, 2464, -608, 2448, -592, 2432, -608, 2416, -600, 2400, -608, 2384, -600, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -600, 2272, -608, 2256, -600, 2240, -608, 2224, -592, 2208, -608, 2192, -600, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -600, 2080, -608, 2064, -600, 2048, -608, 2032, -592, 2016, -608, 2000, -600, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="GroundShadow9" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( -4512, 632 )
+color = Color( 0.392157, 0.490196, 0.203922, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2688, -624, 2688, -608, 2672, -592, 2656, -608, 2640, -592, 2624, -608, 2608, -592, 2592, -608, 2576, -592, 2560, -608, 2544, -592, 2528, -608, 2512, -592, 2496, -608, 2480, -592, 2464, -608, 2448, -592, 2432, -608, 2416, -592, 2400, -608, 2384, -592, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -592, 2272, -608, 2256, -592, 2240, -608, 2224, -592, 2208, -608, 2192, -592, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -592, 2080, -608, 2064, -592, 2048, -608, 2032, -592, 2016, -608, 2000, -592, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="Grass9" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( -4512, 624 )
+color = Color( 0.568627, 0.780392, 0.254902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2688, -624, 2688, -608, 2672, -592, 2656, -608, 2640, -600, 2624, -608, 2608, -600, 2592, -608, 2576, -592, 2560, -608, 2544, -600, 2528, -608, 2512, -592, 2496, -608, 2480, -600, 2464, -608, 2448, -592, 2432, -608, 2416, -600, 2400, -608, 2384, -600, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -600, 2272, -608, 2256, -600, 2240, -608, 2224, -592, 2208, -608, 2192, -600, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -600, 2080, -608, 2064, -600, 2048, -608, 2032, -592, 2016, -608, 2000, -600, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="GroundShadow10" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( -3744, 632 )
+color = Color( 0.392157, 0.490196, 0.203922, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2688, -624, 2688, -608, 2672, -592, 2656, -608, 2640, -592, 2624, -608, 2608, -592, 2592, -608, 2576, -592, 2560, -608, 2544, -592, 2528, -608, 2512, -592, 2496, -608, 2480, -592, 2464, -608, 2448, -592, 2432, -608, 2416, -592, 2400, -608, 2384, -592, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -592, 2272, -608, 2256, -592, 2240, -608, 2224, -592, 2208, -608, 2192, -592, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -592, 2080, -608, 2064, -592, 2048, -608, 2032, -592, 2016, -608, 2000, -592, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="Grass10" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( -3744, 624 )
+color = Color( 0.568627, 0.780392, 0.254902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2688, -624, 2688, -608, 2672, -592, 2656, -608, 2640, -600, 2624, -608, 2608, -600, 2592, -608, 2576, -592, 2560, -608, 2544, -600, 2528, -608, 2512, -592, 2496, -608, 2480, -600, 2464, -608, 2448, -592, 2432, -608, 2416, -600, 2400, -608, 2384, -600, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -600, 2272, -608, 2256, -600, 2240, -608, 2224, -592, 2208, -608, 2192, -600, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -600, 2080, -608, 2064, -600, 2048, -608, 2032, -592, 2016, -608, 2000, -600, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="GroundShadow3" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( -384, 1076 )
+color = Color( 0.392157, 0.490196, 0.203922, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2544, -624, 2544, -608, 2528, -608, 2512, -592, 2496, -608, 2480, -592, 2464, -608, 2448, -592, 2432, -608, 2416, -592, 2400, -608, 2384, -592, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -592, 2272, -608, 2256, -592, 2240, -608, 2224, -592, 2208, -608, 2192, -592, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -592, 2080, -608, 2064, -592, 2048, -608, 2032, -592, 2016, -608, 2000, -592, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="Grass3" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( -384, 1068 )
+color = Color( 0.568627, 0.780392, 0.254902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 1920, -624, 2544, -624, 2544, -608, 2528, -608, 2512, -592, 2496, -608, 2480, -600, 2464, -608, 2448, -592, 2432, -608, 2416, -600, 2400, -608, 2384, -600, 2368, -608, 2352, -592, 2336, -608, 2320, -592, 2304, -608, 2288, -600, 2272, -608, 2256, -600, 2240, -608, 2224, -592, 2208, -608, 2192, -600, 2176, -608, 2160, -592, 2144, -608, 2128, -592, 2112, -608, 2096, -600, 2080, -608, 2064, -600, 2048, -608, 2032, -592, 2016, -608, 2000, -600, 1984, -608, 1968, -592, 1952, -608, 1936, -592, 1920, -608 )
+
+[node name="Branches" type="Node2D" parent="Backgrounds"]
+
+[node name="SmallTree7" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( 2376, -44 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 68, -204, -132, -60, -68, -12, 68, -140, 192, -224, 368, -296, 196, -256, 248, -352, 292, -444, 232, -360 )
+
+[node name="SmallTree10" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( 2356, -408 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 68, -204, -132, -60, -68, -12, 68, -140, 248, -352, 292, -444, 232, -360 )
+
+[node name="SmallTree11" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( 2356, -408 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 68, -204, -132, -60, -68, -12, 68, -140, 164, -272, 360, -344, 232, -324, 248, -352, 292, -444, 232, -360 )
+
+[node name="SmallTree16" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( 660, 124 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 68, -204, -132, -60, -68, -12, 68, -140, 184, -172, 348, -212, 180, -196, 144, -208, 248, -352, 292, -444, 232, -360 )
+
+[node name="SmallTree17" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( 624, -268 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 68, -204, -132, -60, -68, -12, 68, -140, 184, -172, 348, -212, 180, -196, 144, -208, 248, -352, 292, -444, 232, -360 )
+
+[node name="SmallTree13" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( 2280, -928 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 68, -204, -132, -60, -68, -12, 68, -140, 248, -352, 392, -404, 552, -556, 232, -360 )
+
+[node name="SmallTree8" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( 3208, 44 )
+scale = Vector2( -1, 1 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 68, -204, -132, -60, -68, -12, 68, -140, 248, -352, 292, -444, 232, -360 )
+
+[node name="SmallTree15" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( 2216, 12 )
+rotation = -0.261799
+scale = Vector2( -1, 1 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 68, -204, -132, -60, -68, -12, 68, -140, 248, -352, 292, -444, 232, -360 )
+
+[node name="SmallTree9" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( 3164, -336 )
+rotation = -0.261799
+scale = Vector2( -1, 1 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 68, -204, -132, -60, -68, -12, 68, -140, 248, -352, 292, -444, 232, -360 )
+
+[node name="SmallTree18" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( 2084, -708 )
+rotation = -0.261799
+scale = Vector2( -1, 1 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 68, -204, -132, -60, -68, -12, 68, -140, 248, -352, 292, -444, 232, -360 )
+
+[node name="SmallTree19" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( 2144, -1224 )
+rotation = -0.261799
+scale = Vector2( -1, 1 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 68, -204, -132, -60, -68, -12, 68, -140, 248, -352, 292, -444, 232, -360, 115.133, -250.328, 106.148, -438.411 )
+
+[node name="SmallTree20" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( 2164, -1628 )
+rotation = -0.261799
+scale = Vector2( -1, 1 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 68, -204, -132, -60, -68, -12, 68, -140, 248, -352, 292, -444, 232, -360 )
+
+[node name="SmallTree12" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( 3224, -736 )
+rotation = -0.261799
+scale = Vector2( -1, 1 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 68, -204, -132, -60, -68, -12, 68, -140, 248, -352, 292, -444, 232, -360, 100.991, -225.833, 59.1741, -289.168 )
+
+[node name="SmallTree14" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( 3288, -1384 )
+rotation = -0.523598
+scale = Vector2( -1, 1 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 68, -204, -132, -60, -68, -12, 68, -140, 248, -352, 292, -444, 232, -360 )
+
+[node name="Polygon2D8" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( 1200, 28.4 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 416, 52, 420, 72, 412, 112, 416, 156, 412, 208, 420, 232, 416, 268, 420, 308, 412, 352, 400, 396, 384, 416, 360, 436, 384, 436, 432, 416, 440, 428, 476, 416, 500, 428, 516, 428, 508, 416, 504, 400, 488, 384, 488, 364, 488, 296, 484, 196, 476, 144, 484, 88, 476, 20, 468, -108, 472, -224, 556, -288, 656, -404, 540, -296, 472, -264, 444, -288, 408, -940, 408, -928, 404, -348, 412, -216, 408, -100, 416, 18, 328, 10, 236, -10, 108, -98, 216, -2, 272, 18 )
+
+[node name="Polygon2D20" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( -308, -412 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( 416, 52, 412, 72, 420, 160, 420, 232, 416, 268, 396, 288, 404, 300, 424, 292, 412, 352, 400, 396, 384, 416, 360, 436, 384, 436, 432, 416, 440, 428, 476, 416, 500, 428, 516, 428, 508, 416, 504, 400, 488, 384, 484, 292, 492, 268, 484, 184, 496, 168, 492, 144, 480, 148, 476, 20, 468, -108, 444, -288, 408, -940, 408, -928, 404, -348, 380, -340, 248, -420, 308, -356, 400, -296, 412, -216, 408, -100 )
+
+[node name="Polygon2D7" type="Polygon2D" parent="Backgrounds/Branches"]
+position = Vector2( -188, -408 )
+scale = Vector2( -1, 1 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+antialiased = true
+polygon = PoolVector2Array( 416, 52, 420, 72, 412, 112, 416, 156, 412, 208, 420, 232, 416, 268, 420, 308, 412, 352, 400, 396, 384, 416, 360, 436, 384, 436, 432, 416, 440, 428, 476, 416, 500, 428, 516, 428, 508, 416, 504, 400, 488, 384, 488, 364, 484, 292, 488, 288, 516, 292, 516, 280, 492, 268, 484, 196, 476, 144, 484, 88, 476, 20, 532, -48, 468, -108, 444, -288, 408, -940, 408, -928, 404, -348, 412, -216, 408, -100, 416, 18, 328, 10, 236, -10, 108, -98, 216, -2, 272, 18 )
+
+[node name="SmallTree4" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 564, 64 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( -84, -576, -84, 68, 76, 68, 76, -576 )
+
+[node name="SmallTree5" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2244, 188 )
+color = Color( 0.419608, 0.4, 0.356863, 1 )
+antialiased = true
+polygon = PoolVector2Array( -84, -576, -84, 68, 108, 68, 108, -576 )
+
+[node name="SmallTree" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2262, 448 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+antialiased = true
+polygon = PoolVector2Array( -102, -236, -102, -4, -178, 96, -154, 84, -166, 120, -174, 216, -210, 260, -142, 228, -82, 140, -46, 160, 10, 276, 10, 180, 34, 108, 66, 132, 110, 188, 186, 204, 142, 144, 126, 68, 114, 4, 138, 8, 90, -64, 90, -236 )
+
+[node name="SmallTree6" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2262, 64 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+antialiased = true
+polygon = PoolVector2Array( -102, -2148, -102, -4, 90, -64, 90, -2164 )
+
+[node name="SmallTree2" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 564, 508 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+antialiased = true
+polygon = PoolVector2Array( -84, -576, -84, -508, -124, -440, -248, -344, -176, -364, -124, -380, -168, -224, -108, -260, -192, -144, -296, -72, -332, 0, -204, -72, -112, -96, -136, -24, -140, 32, -248, 160, -288, 252, -32, 84, 28, 144, 68, 248, 108, 164, 124, 60, 76, -64, 76, -576 )
+
+[node name="SmallTree3" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 564, -380 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+antialiased = true
+polygon = PoolVector2Array( -84, -576, -84, 68, 76, 68, 76, -576 )
+
+[node name="TreeA" type="Polygon2D" parent="Backgrounds"]
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+antialiased = true
+polygon = PoolVector2Array( 3072, 624, 2956, 624, 2832, 668, 2960, 568, 3024, 520, 3092, 420, 3116, 268, 3124, 188, 3120, 88, 3124, -28, 3116, -92, 3120, -144, 3120, -188, 3124, -260, 3120, -396, 3108, -428, 3120, -540, 3120, -608, 3124, -704, 3120, -752, 3120, -952, 3116, -1036, 3124, -1132, 3120, -1196, 3120, -1332, 3980, -1332, 3960, 732, 3976, 1008, 3568, 1020, 3372, 732, 3316, 960, 3204, 796, 2896, 1172, 3040, 784 )
+
+[node name="TreeB" type="Polygon2D" parent="Backgrounds"]
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+antialiased = true
+polygon = PoolVector2Array( 3124, -1484, 3136, -2492, 4076, -2496, 4032, -1572, 3720, -1544, 3664, -1580, 3524, -1564, 3420, -1616, 3340, -1552, 3268, -1572, 3212, -1492 )
+
+[node name="Leaves" type="Node2D" parent="Backgrounds"]
+
+[node name="Polygon2D10" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 2596, -428 )
+rotation = 4.97418
+scale = Vector2( 1, -1 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D11" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 2466, -604 )
+rotation = 3.92699
+scale = Vector2( 1, -1 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D12" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 2784, -724 )
+rotation = 3.40339
+scale = Vector2( 1, -1 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D13" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 2568, -908 )
+rotation = 4.18878
+scale = Vector2( 1.61032, -1.89963 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D26" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 992, -444 )
+rotation = 4.18878
+scale = Vector2( 1.61032, -1.89963 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D27" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1316, -100 )
+rotation = 4.97418
+scale = Vector2( 2.60692, -1.53546 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D28" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1480, -436 )
+rotation = 4.18878
+scale = Vector2( 1.61032, -1.89963 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D29" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1876, -228 )
+rotation = 4.18878
+scale = Vector2( 1.61032, -1.89963 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D30" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1580, -124 )
+rotation = 4.18878
+scale = Vector2( 1.61032, -1.89963 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D31" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 976, -204 )
+rotation = 4.97418
+scale = Vector2( 1.61032, -1.89963 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D22" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 3034, -636.4 )
+rotation = 1.0472
+scale = Vector2( 1.22895, -1.88753 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D23" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 3024, -1016 )
+rotation = 1.309
+scale = Vector2( 1.03686, -1.01205 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D24" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 2924, -316 )
+rotation = 2.61799
+scale = Vector2( 1.43712, -1.55601 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D25" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 2496, -172 )
+rotation = 3.14159
+scale = Vector2( 1.43712, -1.55601 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D14" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 2840, -1204 )
+rotation = 4.71238
+scale = Vector2( 1.99673, -1.35303 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D15" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 2500, -1284 )
+rotation = 4.97418
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D19" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 2420, -1544 )
+rotation = 7.33037
+scale = Vector2( 1.20896, -0.961534 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D20" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 2892, -1560 )
+rotation = 7.85397
+scale = Vector2( 1.20896, -0.961534 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D21" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 2588, -1552 )
+rotation = 7.85397
+scale = Vector2( 1.20896, -0.961534 )
+color = Color( 0.509804, 0.709804, 0.54902, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D16" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 2644, -1680 )
+rotation = -0.261808
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D17" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 2972, -1816 )
+rotation = -0.261808
+scale = Vector2( 1.27485, -1.69223 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D18" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 2502, -1948 )
+rotation = 1.04719
+scale = Vector2( 0.881495, -1.34587 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D32" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 924.367, -635.929 )
+rotation = -0.261808
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D33" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1252.37, -771.929 )
+rotation = -0.261808
+scale = Vector2( 1.27485, -1.69223 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D34" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 782.367, -903.929 )
+rotation = 1.04719
+scale = Vector2( 0.881495, -1.34587 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D35" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1716.37, -671.929 )
+rotation = -0.261808
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D36" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 2044.37, -807.929 )
+rotation = -0.261808
+scale = Vector2( 1.27485, -1.69223 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D37" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1574.37, -896 )
+rotation = 1.04719
+scale = Vector2( 0.881495, -1.34587 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D38" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1037.79, -991.421 )
+rotation = 2.09439
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D39" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1365.79, -1127.42 )
+rotation = 2.09439
+scale = Vector2( 1.27485, -1.69223 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D40" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 895.795, -1259.42 )
+rotation = 3.40339
+scale = Vector2( 0.881495, -1.34587 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D41" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1037.79, -991.421 )
+rotation = 2.09439
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D42" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1365.79, -1127.42 )
+rotation = 2.09439
+scale = Vector2( 1.27485, -1.69223 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D43" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 895.795, -1259.42 )
+rotation = 3.40339
+scale = Vector2( 0.881495, -1.34587 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D44" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1645.79, -1151.42 )
+rotation = 3.66519
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D45" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1973.79, -1287.42 )
+rotation = 3.66519
+scale = Vector2( 1.27485, -1.69223 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D46" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1503.79, -1419.42 )
+rotation = 4.97418
+scale = Vector2( 0.881495, -1.34587 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D47" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1050.13, -1220.21 )
+rotation = 3.66519
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D48" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1378.13, -1356.21 )
+rotation = 3.66519
+scale = Vector2( 1.27485, -1.69223 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D49" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 908.128, -1488.21 )
+rotation = 4.97418
+scale = Vector2( 0.881495, -1.34587 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D50" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1638.13, -1588.21 )
+rotation = 3.66519
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D51" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1966.13, -1724.21 )
+rotation = 3.66519
+scale = Vector2( 1.27485, -1.69223 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D52" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1496.13, -1856.21 )
+rotation = 4.97418
+scale = Vector2( 0.881495, -1.34587 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D53" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1418.13, -1848.21 )
+rotation = 3.66519
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D54" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1746.13, -1984.21 )
+rotation = 3.66519
+scale = Vector2( 1.27485, -1.69223 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D55" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1276.13, -2116.21 )
+rotation = 4.97418
+scale = Vector2( 0.881495, -1.34587 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D56" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 858.128, -1644.21 )
+rotation = 3.66519
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D57" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 1186.13, -1780.21 )
+rotation = 3.66519
+scale = Vector2( 1.27485, -1.69223 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D58" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 716.128, -1912.21 )
+rotation = 4.97418
+scale = Vector2( 0.881495, -1.34587 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D59" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 526.128, -1140.21 )
+rotation = 3.66519
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D60" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 854.126, -1276.21 )
+rotation = 3.66519
+scale = Vector2( 1.27485, -1.69223 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D61" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 384.128, -1408.21 )
+rotation = 4.97418
+scale = Vector2( 0.881495, -1.34587 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D62" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 218.128, -644.206 )
+rotation = 3.66519
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D63" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 546.126, -780.206 )
+rotation = 3.66519
+scale = Vector2( 1.27485, -1.69223 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D64" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 76.1282, -912.205 )
+rotation = 4.97418
+scale = Vector2( 0.881495, -1.34587 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D65" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( -341.872, -596.206 )
+rotation = 6.54498
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D74" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( -796, -580 )
+rotation = 6.28318
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D66" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( -13.8735, -732.206 )
+rotation = 6.54498
+scale = Vector2( 1.27485, -1.69223 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D67" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( -483.872, -864.206 )
+rotation = 7.85397
+scale = Vector2( 0.881495, -1.34587 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D68" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( -535.111, -720.323 )
+rotation = 6.54498
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D69" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( -207.113, -856.323 )
+rotation = 6.54498
+scale = Vector2( 1.27485, -1.69223 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D70" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( -677.111, -988.323 )
+rotation = 7.85397
+scale = Vector2( 0.881495, -1.34587 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D71" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( -199.111, -1060.32 )
+rotation = 6.54498
+scale = Vector2( 1.95252, -1.50185 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D72" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( 128.887, -1196.32 )
+rotation = 6.54498
+scale = Vector2( 1.27485, -1.69223 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D73" type="Polygon2D" parent="Backgrounds/Leaves"]
+position = Vector2( -341.111, -1328.32 )
+rotation = 7.85397
+scale = Vector2( 0.881495, -1.34587 )
+color = Color( 0.505882, 0.607843, 0.317647, 1 )
+antialiased = true
+polygon = PoolVector2Array( 96.0001, -100, 16.0001, -124, -55.9999, -84, -104, -12, -92, 68, -40, 108, 44, 64, 108, 8, 120, -68 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1712, 400 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 660, -32, 660, -20, 640, -20 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1712, 368 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 660, -32, 660, -20, 640, -20 )
+
+[node name="Polygon2D3" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1712, 336 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 660, -32, 660, -20, 640, -20 )
+
+[node name="Polygon2D4" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1712, 308 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 660, -32, 660, -20, 640, -20 )
+
+[node name="Polygon2D5" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1712, 276 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 660, -32, 660, -20, 640, -20 )
+
+[node name="Polygon2D6" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1712, 244 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 660, -32, 660, -20, 640, -20 )
+
+[node name="Polygon2D7" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1500, 244 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 660, -32, 660, -20, 640, -20 )
+
+[node name="Polygon2D8" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 0, -35 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="Polygon2D9" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2464, -732 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D33" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2372, -296 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D34" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2196, -444 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D10" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2464, -764 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D11" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2464, -796 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D12" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2464, -828 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D35" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2464, -1176 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D36" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2464, -1208 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D37" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2464, -1236 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D38" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2464, -1268 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D39" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2464, -1300 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D40" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2292, -976 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D41" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2108, -1096 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D42" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2080, -908 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D43" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1840, -1028 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D44" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1768, -876 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D45" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1904, -764 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D46" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2028, -620 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D47" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1804, -572 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D48" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1636, -432 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D49" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1924, -368 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D50" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2040, -236 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D51" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1856, -96 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D52" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1920, 72 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 660, -32, 660, -20, 636, -20 )
+
+[node name="Polygon2D53" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2204, -92 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 660, -32, 660, -20, 636, -20 )
+
+[node name="Polygon2D54" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2324, 24 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 664, -32, 664, -20, 636, -20 )
+
+[node name="Polygon2D55" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2324, 176 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 664, -32, 664, -20, 636, -20 )
+
+[node name="Polygon2D56" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2116, 280 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 632, -32, 664, -32, 664, -20, 632, -20 )
+
+[node name="Polygon2D13" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2464, -856 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D14" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2464, -888 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D15" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2464, -920 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D16" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2464, -156 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D17" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 2464, -124 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D18" type="Polygon2D" parent="Backgrounds"]
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="Polygon2D19" type="Polygon2D" parent="Backgrounds"]
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="Polygon2D20" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 0, 32 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="Polygon2D21" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 0, 64 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="Polygon2D22" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 0, 96 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="Polygon2D23" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 0, 128 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="Polygon2D24" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 0, 160 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="Polygon2D25" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 0, 192 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="Polygon2D26" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 0, 224 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="Polygon2D27" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 0, 256 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="Polygon2D28" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 0, 292 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="Polygon2D29" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 0, 332 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="Polygon2D30" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 0, 368 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="Polygon2D31" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 0, 404 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="Polygon2D32" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 0, 436 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="Polygon2D57" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 420, 412 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D58" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 580, 360 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D59" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 752, 316 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D60" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 968, 284 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Polygon2D61" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 1196, 256 )
+color = Color( 0.396078, 0.286275, 0.231373, 1 )
+polygon = PoolVector2Array( 636, -32, 656, -32, 656, -20, 636, -20 )
+
+[node name="Etc" type="Node2D" parent="Backgrounds"]
+
+[node name="Rock2" type="Polygon2D" parent="Backgrounds/Etc"]
+position = Vector2( -1332, 1068 )
+color = Color( 0.419608, 0.505882, 0.560784, 1 )
+antialiased = true
+polygon = PoolVector2Array( 2140, -624, 2148, -644, 2180, -664, 2228, -656, 2240, -624, 2168, -618 )
+
+[node name="Rock3" type="Polygon2D" parent="Backgrounds/Etc"]
+position = Vector2( 624, 1008 )
+color = Color( 0.419608, 0.505882, 0.560784, 1 )
+antialiased = true
+polygon = PoolVector2Array( 2140, -624, 2148, -644, 2180, -664, 2228, -656, 2240, -624, 2168, -618 )
+
+[node name="Transition" type="Polygon2D" parent="Backgrounds"]
+position = Vector2( 940, -804 )
+color = Color( 0.0431373, 0.0431373, 0.0431373, 1 )
+polygon = PoolVector2Array( 2816, -624, 2784, -640, 2816, -656, 2784, -672, 2816, -688, 2784, -704, 2816, -720, 2784, -736, 2816, -752, 2784, -768, 2816, -784, 2784, -800, 2816, -816, 2784, -832, 2816, -848, 2784, -864, 2816, -880, 2784, -896, 2816, -912, 2784, -928, 2816, -944, 2784, -960, 2816, -976, 2784, -992, 2816, -1008, 2784, -1024, 2816, -1040, 2784, -1056, 2816, -1072, 2784, -1088, 2816, -1104, 2784, -1120, 2816, -1136, 2784, -1152, 2816, -1168, 2784, -1184, 2816, -1200, 2784, -1216, 2816, -1232, 2784, -1248, 2816, -1264, 2784, -1280, 2816, -1296, 4324, -1292, 4324, 44, 2816, 44, 2784, 32, 2816, 16, 2784, 0, 2816, -16, 2784, -32, 2816, -48, 2784, -64, 2816, -80, 2784, -92, 2816, -112, 2784, -128, 2816, -144, 2784, -160, 2816, -176, 2784, -192, 2816, -208, 2784, -224, 2816, -240, 2784, -256, 2816, -272, 2784, -288, 2816, -304, 2784, -320, 2816, -336, 2784, -352, 2816, -368, 2784, -384, 2816, -400, 2784, -416, 2816, -432, 2784, -448, 2816, -464, 2784, -480, 2816, -496, 2784, -512, 2816, -528, 2784, -544, 2816, -560, 2784, -576, 2816, -592, 2784, -608 )
+
+[node name="Ground" type="StaticBody2D" parent="."]
+visible = false
+collision_layer = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground"]
+polygon = PoolVector2Array( -668, 0, -652, -2328, -412, -2316, 3496, -2256, 3900, -1812, 4368, -1796, 4380, -1088, 3964, -1104, 3980, -1332, 4156, -1332, 4156, -1572, 3268, -1572, 3124, -1484, 3128, -1712, 2352, -1712, 2352, -748, 2352, 0, 2160, 60, 2160, -520, 640, -551.151, 640, -312, 480, -312, 480, -552, -572, -552, -572, 0, 480, 0, 480, -68, 640, -68, 640, 444, 2160, 444, 2160, 212, 2352, 212, 2352, 384, 3120.32, 384, 3120, -1332, 3980, -1332, 3964, -1104, 3532, -1122.52, 3532, 732, 3372, 732, 2632, 576, 640, 576, 480, 512, 480.397, 244, -680, 244 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Ground"]
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="CollisionPolygon2D17" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 0, -35 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 0, 32 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 0, 64 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 0, 96 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 0, 128 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 0, 160 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 0, 192 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 0, 224 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="CollisionPolygon2D11" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 0, 256 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 0, 292 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="CollisionPolygon2D13" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 0, 332 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="CollisionPolygon2D14" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 0, 368 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="CollisionPolygon2D15" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 0, 404 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="CollisionPolygon2D16" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 0, 436 )
+polygon = PoolVector2Array( 640, -32, 656, -32, 656, -20, 640, -20 )
+
+[node name="CollisionPolygon2D19" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 64, -20 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D20" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 224, -71 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D21" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 396, -116 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D22" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 612, -148 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D23" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 840, -176 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D24" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1148, -188 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D25" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1768, -152 )
+polygon = PoolVector2Array( 980, 400, 980, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D30" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1360, -32 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D31" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1360, -64 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D32" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1360, -96 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D34" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1360, -124 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D35" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1360, -156 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D33" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1360, -188 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D26" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1968, -256 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1020, 412, 1020, 400 )
+
+[node name="CollisionPolygon2D27" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1564, -360 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1016, 412, 1016, 400 )
+
+[node name="CollisionPolygon2D36" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1976, -408 )
+polygon = PoolVector2Array( 984, 400, 984, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D37" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1852, -524 )
+polygon = PoolVector2Array( 988, 400, 988, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D38" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1500, -528 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D39" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1684, -668 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D40" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 2016, -728 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D41" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1568, -800 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D44" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1448, -1004 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D45" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1672, -1052 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D46" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1548, -1196 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D48" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 2108, -1164 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D49" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 2108, -1196 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D61" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 2108, -556.4 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D62" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 2108, -588.4 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D50" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 2108, -1228 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D51" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 2108, -1260 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D52" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 2108, -1288 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D53" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 2108, -1320 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D54" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 2108, -1352 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D63" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 2108, -1608.4 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D64" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 2108, -1640.4 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D65" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 2108, -1668.4 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D66" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 2108, -1700.4 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D67" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 2108, -1732.4 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D55" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1724, -1340 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D56" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1936, -1408 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D57" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1412, -1308 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D58" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1752, -1528 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D60" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1484, -1460 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="CollisionPolygon2D42" type="CollisionPolygon2D" parent="Ground"]
+position = Vector2( 1840, -876 )
+polygon = PoolVector2Array( 992, 400, 992, 412, 1012, 412, 1012, 400 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+force_allow_roll = true
+force_allow_project = true
+force_allow_slam = true
+
+[node name="Sign" parent="." instance=ExtResource( 3 )]
+position = Vector2( 288, 0 )
+scale = Vector2( -1, 1 )
+dialog_name = "Slam Sign"
+
+[node name="Post" type="Polygon2D" parent="Sign"]
+position = Vector2( -4, 0 )
+color = Color( 0.394531, 0.285994, 0.232712, 1 )
+antialiased = true
+polygon = PoolVector2Array( -4, 0, 0, -24, 8, -20, 4, 0 )
+
+[node name="Face" type="Polygon2D" parent="Sign"]
+position = Vector2( -4, 0 )
+color = Color( 0.603922, 0.388235, 0.282353, 1 )
+antialiased = true
+polygon = PoolVector2Array( -20, -48, 32, -40, 28, -16, -24, -24 )
+
+[node name="Character" type="Polygon2D" parent="Sign"]
+position = Vector2( -6, -2 )
+color = Color( 0.243137, 0.129412, 0.215686, 1 )
+antialiased = true
+polygon = PoolVector2Array( -12, -40, -16, -28, -8, -24, -12, -32, -4, -36 )
+
+[node name="Character3" type="Polygon2D" parent="Sign"]
+position = Vector2( -2, 2 )
+scale = Vector2( -1, 1 )
+color = Color( 0.243137, 0.129412, 0.215686, 1 )
+antialiased = true
+polygon = PoolVector2Array( -12, -40, -16, -28, -8, -24, -12, -32, -4, -36 )
+
+[node name="Character2" type="Polygon2D" parent="Sign"]
+position = Vector2( -8, -2 )
+color = Color( 0.243137, 0.129412, 0.215686, 1 )
+antialiased = true
+polygon = PoolVector2Array( 4, -36, 8, -36, 4, -24, 0, -24 )
+
+[node name="Character4" type="Polygon2D" parent="Sign"]
+position = Vector2( 22, 1 )
+scale = Vector2( -1, 1 )
+color = Color( 0.243137, 0.129412, 0.215686, 1 )
+antialiased = true
+polygon = PoolVector2Array( 4, -36, 8, -36, 4, -24, 0, -24 )
+
+[node name="Sign2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2260, 212 )
+scale = Vector2( -1, 1 )
+dialog_name = "Slam Extending Sign"
+
+[node name="Post" type="Polygon2D" parent="Sign2"]
+position = Vector2( -4, 0 )
+color = Color( 0.394531, 0.285994, 0.232712, 1 )
+antialiased = true
+polygon = PoolVector2Array( -4, 0, 0, -24, 8, -20, 4, 0 )
+
+[node name="Face" type="Polygon2D" parent="Sign2"]
+position = Vector2( -4, 0 )
+color = Color( 0.603922, 0.388235, 0.282353, 1 )
+antialiased = true
+polygon = PoolVector2Array( -20, -48, 32, -40, 28, -16, -24, -24 )
+
+[node name="Character" type="Polygon2D" parent="Sign2"]
+position = Vector2( -6, -2 )
+color = Color( 0.243137, 0.129412, 0.215686, 1 )
+antialiased = true
+polygon = PoolVector2Array( -12, -40, -16, -28, -8, -24, -12, -32, -4, -36 )
+
+[node name="Character3" type="Polygon2D" parent="Sign2"]
+position = Vector2( -2, 2 )
+scale = Vector2( -1, 1 )
+color = Color( 0.243137, 0.129412, 0.215686, 1 )
+antialiased = true
+polygon = PoolVector2Array( -12, -40, -16, -28, -8, -24, -12, -32, -4, -36 )
+
+[node name="Character2" type="Polygon2D" parent="Sign2"]
+position = Vector2( -8, -2 )
+color = Color( 0.243137, 0.129412, 0.215686, 1 )
+antialiased = true
+polygon = PoolVector2Array( 4, -36, 8, -36, 4, -24, 0, -24 )
+
+[node name="Character4" type="Polygon2D" parent="Sign2"]
+position = Vector2( 22, 1 )
+scale = Vector2( -1, 1 )
+color = Color( 0.243137, 0.129412, 0.215686, 1 )
+antialiased = true
+polygon = PoolVector2Array( 4, -36, 8, -36, 4, -24, 0, -24 )
+
+[node name="Trigger" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3396, -1332 )
+dialog_name = "Cheese"
+
+[node name="ExitArea" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3956, -1460 )
+scene = ExtResource( 6 )
+
+[node name="Cheese" type="Node2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="Cheese"]
+position = Vector2( 3527, -1375 )
+color = Color( 0.937255, 0.886275, 0.470588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -23, 33, -23, 41, -21, 43, 22, 43, 23, 42, 23, 32, 22, 31, -21, 31 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="Cheese"]
+position = Vector2( 3527, -1375 )
+color = Color( 0.615686, 0.188235, 0.231373, 1 )
+antialiased = true
+polygon = PoolVector2Array( -23, 33, -23, 41, -21, 43, -16, 43, -18, 41, -18, 33, -16, 31, -21, 31 )

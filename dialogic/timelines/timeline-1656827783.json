@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "\tFinally mastering all the ingredients for the hoagie you prepare youself to assemble them all!"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1656827783.json",
+		"name": "Finally"
+	}
+}

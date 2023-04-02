@@ -1,0 +1,134 @@
+[gd_scene format=2]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+layer = -10
+follow_viewport_enable = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.05, 0 )
+
+[node name="Polygon2D" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( -562, 249 )
+scale = Vector2( -0.357, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( 1982, 76.9999 )
+scale = Vector2( -0.357, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D3" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( -891, -434 )
+scale = Vector2( -0.357, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D4" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( 822, -375 )
+scale = Vector2( 0.357491, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D5" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( -1131, -553 )
+scale = Vector2( 0.357491, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D6" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( -1036, 336 )
+scale = Vector2( 0.357491, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D7" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( -1112.53, 946 )
+scale = Vector2( -0.357, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D8" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( 2151, 711 )
+scale = Vector2( 0.357491, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D9" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( 1489, -504 )
+scale = Vector2( -0.357, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D10" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( 2724, -838 )
+scale = Vector2( 0.357491, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D11" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( 3112, 766 )
+scale = Vector2( -0.357, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D18" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( 2213, 1083 )
+scale = Vector2( -0.357, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D12" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( 4153, 4 )
+scale = Vector2( 0.357491, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D13" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( 3019, -342 )
+scale = Vector2( -0.357, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D14" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( 1355, -1027 )
+scale = Vector2( 0.357491, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D15" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( -851.53, -934 )
+scale = Vector2( -0.357, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D16" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( 1316, 493 )
+scale = Vector2( 0.357491, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )
+
+[node name="Polygon2D17" type="Polygon2D" parent="ParallaxLayer"]
+position = Vector2( 1119, 1135 )
+scale = Vector2( 0.357491, 0.357491 )
+color = Color( 0.729412, 0.87451, 0.870588, 1 )
+antialiased = true
+polygon = PoolVector2Array( -1411, -706, -1390, -874, -1310, -966, -1246, -1054, -1144, -1098, -989, -1090, -875, -1033, -767, -943, -590, -1009, -452, -970, -363, -911, -290, -772, -299, -619, -458, -541, -584, -514, -758, -526, -953, -550, -1168, -517, -1309, -559 )

@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[color=#3b80d0][center]Slam Extending[/center][/color][br][br]\tYou can extend your height, distance and precision when jumping or trying to land on a small platform by cancelling the slam with a jump.[br][br][color=#A5EFAC][center]Simply jump mid-slam.[/center][/color]"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1656771189.json",
+		"name": "Slam Extending Sign"
+	}
+}

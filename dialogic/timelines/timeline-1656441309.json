@@ -1,0 +1,77 @@
+{
+	"events": [
+		{
+			"character": "character-1656439902.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hey sir do you happen to have any peppers?"
+		},
+		{
+			"character": "character-1656442630.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Peppers? Well now if I didn't have any peppers then my name wouldn't be Pepper Jack!",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialog",
+					"file": "res://voices/peppas (5).wav"
+				}
+			}
+		},
+		{
+			"character": "character-1656439902.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Great cause I've got one crazy craving for the spiciest hoagie I've ever had."
+		},
+		{
+			"character": "character-1656439944.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Then have I got a pepper for you; the spiciest one I have captured yet!",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialog",
+					"file": "res://voices/have_I_got_one (4).wav"
+				}
+			}
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[color=#3b80d0]Spicy Pepper[/color] Aquired!"
+		},
+		{
+			"definition": "1656532329-787",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "1"
+		},
+		{
+			"character": "character-1656439902.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I can already tell this hoagie will be out of this world!"
+		},
+		{
+			"character": "character-1656439944.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Before you go, be warned. The platforms ahead are rotten with pepper mites.",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialog",
+					"file": "res://voices/beforeyougo (2).wav"
+				}
+			}
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1656441309.json",
+		"name": "Pepper Jack"
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[color=#3b80d0][center]The Roll Jump[/center][/color][br][br]\tThe roll jump allows oneself move with the height of a jump but the distance of a roll, quite the useful move so how does one execute a roll jump? [br][br][color=#A5EFAC][center]Simply roll then jump shortly after.[/center][/color]"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1656713623.json",
+		"name": "Roll Jump Sign"
+	}
+}
